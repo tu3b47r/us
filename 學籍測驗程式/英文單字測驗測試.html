@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拼字測驗</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .word-container {
+            margin-bottom: 20px;
+        }
+        .word-item {
+            margin: 10px 0;
+        }
+        input[type="text"] {
+            width: 30px;
+            text-align: center;
+            padding: 5px;
+            margin-right: 5px;
+        }
+        .feedback {
+            margin-top: 10px;
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>拼字測驗</h1>
+<p>請根據提示拼出正確的單字：</p>
+
+<div id="quiz-container"></div>
+
+<button onclick="generateQuiz()">開始測驗</button>
+<button onclick="checkAnswers()">檢查答案</button>
+
+<script>
+    // 30個單字及中文提示
+    const words = [
+        { word: 'apple', hint: '水果', first: 'a', last: 'e', meaning: '蘋果' },
+        { word: 'banana', hint: '水果', first: 'b', last: 'a', meaning: '香蕉' },
+        { word: 'cat', hint: '動物', first: 'c', last: 't', meaning: '貓' },
+        { word: 'dog', hint: '動物', first: 'd', last: 'g', meaning: '狗' },
+        { word: 'elephant', hint: '動物', first: 'e', last: 't', meaning: '大象' },
+        { word: 'fish', hint: '動物', first: 'f', last: 'h', meaning: '魚' },
+        { word: 'grape', hint: '水果', first: 'g', last: 'e', meaning: '葡萄' },
+        { word: 'house', hint: '建築物', first: 'h', last: 'e', meaning: '房子' },
+        { word: 'ice', hint: '物質', first: 'i', last: 'e', meaning: '冰' },
+        { word: 'joker', hint: '卡牌', first: 'j', last: 'r', meaning: '小丑' },
+        { word: 'kite', hint: '玩具', first: 'k', last: 'e', meaning: '風箏' },
+        { word: 'lemon', hint: '水果', first: 'l', last: 'n', meaning: '檸檬' },
+        { word: 'monkey', hint: '動物', first: 'm', last: 'y', meaning: '猴子' },
+        { word: 'notebook', hint: '文具', first: 'n', last: 'k', meaning: '筆記本' },
+        { word: 'orange', hint: '水果', first: 'o', last: 'e', meaning: '橙子' },
+        { word: 'pizza', hint: '食物', first: 'p', last: 'a', meaning: '披薩' },
+        { word: 'queen', hint: '女性', first: 'q', last: 'n', meaning: '女王' },
+        { word: 'rose', hint: '花卉', first: 'r', last: 'e', meaning: '玫瑰' },
+        { word: 'sun', hint: '天體', first: 's', last: 'n', meaning: '太陽' },
+        { word: 'tree', hint: '植物', first: 't', last: 'e', meaning: '樹' },
+        { word: 'umbrella', hint: '雨具', first: 'u', last: 'a', meaning: '雨傘' },
+        { word: 'vase', hint: '容器', first: 'v', last: 'e', meaning: '花瓶' },
+        { word: 'window', hint: '建築物', first: 'w', last: 'w', meaning: '窗戶' },
+        { word: 'xylophone', hint: '樂器', first: 'x', last: 'e', meaning: '木琴' },
+        { word: 'yellow', hint: '顏色', first: 'y', last: 'w', meaning: '黃色' },
+        { word: 'zebra', hint: '動物', first: 'z', last: 'a', meaning: '斑馬' },
+        { word: 'anchor', hint: '工具', first: 'a', last: 'r', meaning: '錨' },
+        { word: 'boat', hint: '交通工具', first: 'b', last: 't', meaning: '船' },
+        { word: 'cloud', hint: '天氣', first: 'c', last: 'd', meaning: '雲' },
+        { word: 'dragon', hint: '神話生物', first: 'd', last: 'n', meaning: '龍' },
+        { word: 'earth', hint: '行星', first: 'e', last: 'h', meaning: '地球' },
+        { word: 'fire', hint: '自然現象', first: 'f', last: 'e', meaning: '火' }
+    ];
+
+    let selectedWords = [];
+    let currentWordIndex = 0;
+
+    // 隨機選擇 10 個單字
+    function generateQuiz() {
+        selectedWords = [];
+        const container = document.getElementById('quiz-container');
+        container.innerHTML = ''; // 清空之前的內容
+
+        while (selectedWords.length < 10) {
+            const randomIndex = Math.floor(Math.random() * words.length);
+            if (!selectedWords.includes(words[randomIndex])) {
+                selectedWords.push(words[randomIndex]);
+            }
+        }
+
+        currentWordIndex = 0;
+        displayWord(selectedWords[currentWordIndex]);
+    }
+
+    // 顯示當前單字
+    function displayWord(word) {
+        const container = document.getElementById('quiz-container');
+        const wordDiv = document.createElement('div');
+        wordDiv.classList.add('word-item');
+        
+        // 顯示提示和字母輸入框
+        wordDiv.innerHTML = `
+            <p>提示: ${word.hint}</p>
+            <p>首字母: ${word.first}, 末字母: ${word.last}</p>
+            <div>
+                <p>請填寫單字 (一個一個字母)：</p>
+                <div id="input-container"></div>
+                <p class="feedback" id="feedback"></p>
+            </div>
+        `;
+        container.appendChild(wordDiv);
+
+        // 創建字母輸入框
+        const inputContainer = document.getElementById('input-container');
+        for (let i = 0; i < word.word.length; i++) {
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.maxLength = 1;
+            input.dataset.index = i;
+            input.addEventListener('input', onInputChange);
+            inputContainer.appendChild(input);
+        }
+    }
+
+    // 處理字母輸入
+    let incorrectAttempts = 0;
+    function onInputChange(event) {
+        const inputs = document.querySelectorAll('#input-container input');
+        const word = selectedWords[currentWordIndex].word;
+        let isCorrect = true;
+        let wordInput = '';
+
+        // 檢查所有輸入框的內容
+        inputs.forEach(input => {
+            wordInput += input.value.toLowerCase();
+            if (input.value.toLowerCase() !== word[input.dataset.index].toLowerCase()) {
+                isCorrect = false;
+            }
+        });
+
+        if (isCorrect && wordInput === word) {
+            document.getElementById('feedback').textContent = '正確！';
+            document.getElementById('feedback').style.color = 'green';
+            currentWordIndex++;
+            if (currentWordIndex < selectedWords.length) {
+                incorrectAttempts = 0;
+                displayWord(selectedWords[currentWordIndex]);
+            } else {
+                document.getElementById('feedback').textContent = '恭喜你完成了所有單字的拼字測驗！';
+            }
+        } else {
+            if (incorrectAttempts < 1) {
+                document.getElementById('feedback').textContent = '拼字錯誤，請再試一次。';
+                document.getElementById('feedback').style.color = 'red';
+                incorrectAttempts++;
+            } else {
+                document.getElementById('feedback').textContent = `錯誤！這個單字的中文意思是：${selectedWords[currentWordIndex].meaning}`;
+                document.getElementById('feedback').style.color = 'red';
+            }
+        }
+    }
+
+    // 檢查所有答案
+    function checkAnswers() {
+        // 在這裡可以加強檢查，根據需求調整
+    }
+</script>
+
+</body>
+</html>

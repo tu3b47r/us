@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇題與填充題解答及計分</title>
+    <style>
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>選擇題 (每題4分)</h2>
+    <form id="quizForm">
+        <!-- 選擇題 -->
+        <div>
+            <p>1. HTML 是什麼的縮寫？</p>
+            <label><input type="radio" name="q1" value="a"> A. Hyper Text Markup Language</label><br>
+            <label><input type="radio" name="q1" value="b"> B. High Text Markup Language</label><br>
+            <label><input type="radio" name="q1" value="c"> C. Hyperlink Text Mark Language</label>
+        </div>
+
+        <div>
+            <p>2. 哪一個標籤用來插入圖片？</p>
+            <label><input type="radio" name="q2" value="a"> A. <img></label><br>
+            <label><input type="radio" name="q2" value="b"> B. <image></label><br>
+            <label><input type="radio" name="q2" value="c"> C. <img src=""></label>
+        </div>
+
+        <div>
+            <p>3. CSS 主要用來做什麼？</p>
+            <label><input type="radio" name="q3" value="a"> A. 控制網站內容</label><br>
+            <label><input type="radio" name="q3" value="b"> B. 控制網站外觀</label><br>
+            <label><input type="radio" name="q3" value="c"> C. 增加網站速度</label>
+        </div>
+
+        <h2>填充題 (每題4分)</h2>
+        <!-- 填充題 -->
+        <div>
+            <p>4. 網頁標題應放在 <input type="text" id="q4"> 標籤中。</p>
+        </div>
+
+        <div>
+            <p>5. 網頁的主要結構包括 <input type="text" id="q5"> 和 <input type="text" id="q6">。</p>
+        </div>
+
+        <div>
+            <p>6. 在HTML中，段落是用 <input type="text" id="q7"> 標籤表示。</p>
+        </div>
+
+        <br>
+        <button type="button" onclick="showAnswers()">提交</button>
+    </form>
+
+    <div id="result" class="result"></div>
+
+    <script>
+        function showAnswers() {
+            let score = 0;
+            let resultMessage = "";
+
+            // 選擇題答案
+            // 選擇題 1
+            let q1 = document.querySelector('input[name="q1"]:checked');
+            if (q1) {
+                if (q1.value === "a") {
+                    score += 4;
+                    resultMessage += "<p>1. 正確答案: A (HTML 是 Hyper Text Markup Language)</p>";
+                } else {
+                    resultMessage += "<p>1. 錯誤答案: " + q1.nextSibling.nodeValue.trim() + ". 正確答案: A (HTML 是 Hyper Text Markup Language)</p>";
+                }
+            } else {
+                resultMessage += "<p>1. 未回答，正確答案: A (HTML 是 Hyper Text Markup Language)</p>";
+            }
+
+            // 選擇題 2
+            let q2 = document.querySelector('input[name="q2"]:checked');
+            if (q2) {
+                if (q2.value === "c") {
+                    score += 4;
+                    resultMessage += "<p>2. 正確答案: C (<img src=''> 用來插入圖片)</p>";
+                } else {
+                    resultMessage += "<p>2. 錯誤答案: " + q2.nextSibling.nodeValue.trim() + ". 正確答案: C (<img src=''> 用來插入圖片)</p>";
+                }
+            } else {
+                resultMessage += "<p>2. 未回答，正確答案: C (<img src=''> 用來插入圖片)</p>";
+            }
+
+            // 選擇題 3
+            let q3 = document.querySelector('input[name="q3"]:checked');
+            if (q3) {
+                if (q3.value === "b") {
+                    score += 4;
+                    resultMessage += "<p>3. 正確答案: B (CSS 主要用來控制網站的外觀)</p>";
+                } else {
+                    resultMessage += "<p>3. 錯誤答案: " + q3.nextSibling.nodeValue.trim() + ". 正確答案: B (CSS 主要用來控制網站的外觀)</p>";
+                }
+            } else {
+                resultMessage += "<p>3. 未回答，正確答案: B (CSS 主要用來控制網站的外觀)</p>";
+            }
+
+            // 填充題答案
+            // 填充題 4
+            let q4 = document.getElementById("q4").value.trim();
+            if (q4.toLowerCase() === "head") {
+                score += 4;
+                resultMessage += "<p>4. 正確答案: head (網頁標題應放在 <head> 標籤中)</p>";
+            } else {
+                resultMessage += "<p>4. 錯誤答案: " + q4 + ". 正確答案: head (網頁標題應放在 <head> 標籤中)</p>";
+            }
+
+            // 填充題 5
+            let q5 = document.getElementById("q5").value.trim();
+            let q6 = document.getElementById("q6").value.trim();
+            if (q5.toLowerCase() === "head" && q6.toLowerCase() === "body") {
+                score += 4;
+                resultMessage += "<p>5. 正確答案: head 和 body (網頁的主要結構包括 <head> 和 <body>)</p>";
+            } else {
+                resultMessage += "<p>5. 錯誤答案: " + q5 + " 和 " + q6 + ". 正確答案: head 和 body (網頁的主要結構包括 <head> 和 <body>)</p>";
+            }
+
+            // 填充題 6
+            let q7 = document.getElementById("q7").value.trim();
+            if (q7.toLowerCase() === "p") {
+                score += 4;
+                resultMessage += "<p>6. 正確答案: p (段落是用 <p> 標籤表示)</p>";
+            } else {
+                resultMessage += "<p>6. 錯誤答案: " + q7 + ". 正確答案: p (段落是用 <p> 標籤表示)</p>";
+            }
+
+            // 顯示總分
+            resultMessage += `<p>總分: ${score} 分</p>`;
+            document.getElementById("result").innerHTML = resultMessage;
+        }
+    </script>
+
+</body>
+</html>
+
+
+請用javaScript撰寫一個有3個選擇題題目和3個填充題題目，顯示各自解答，最後計算分數

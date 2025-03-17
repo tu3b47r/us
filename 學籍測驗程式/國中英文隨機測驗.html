@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇題與填充題解答及計分</title>
+    <style>
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>選擇題 (每題4分)</h2>
+    <form id="quizForm">
+        <!-- 選擇題 -->
+        <div>
+            <p>1.John: ____ the women know each other? May: Yes, they ____ together.</p>
+            <label><input type="radio" name="q1" value="a">(A)Do ; works</label><br>
+            <label><input type="radio" name="q1" value="b">(B)Do ; work</label><br>
+            <label><input type="radio" name="q1" value="c">(C)Does ; works</label><br>
+            <label><input type="radio" name="q1" value="d">(D)Does ; work</label>
+        </div>
+
+        <div>
+            <p>2.My sisters ____ big eyes and long hair, but my eyes are small and my hair ____ short.</p>
+            <label><input type="radio" name="q2" value="a">(A)have ; are</label><br>
+            <label><input type="radio" name="q2" value="b">(B)have ; is</label><br>
+            <label><input type="radio" name="q2" value="c">(C)has ; are</label><br>
+            <label><input type="radio" name="q2" value="d">(D)has ; is</label>
+        </div>
+
+        <div>
+            <p>3.Ray is busy, so he doesn’t eat anything. Now, he ____ time and he ____ a meal now.</p>
+            <label><input type="radio" name="q3" value="a">(A)is having ; is having</label><br>
+            <label><input type="radio" name="q3" value="b">(B)has ; has</label><br>
+            <label><input type="radio" name="q3" value="c">(C)has ; is having</label><br>
+            <label><input type="radio" name="q3" value="d">(D)is having ; has</label>
+        </div>
+
+        <div>
+            <p>4.Alex: Doesn’t John get up at seven every day? Cindy: ______________.</p>
+            <label><input type="radio" name="q4" value="a">(A)Yes, he gets up at six</label><br>
+            <label><input type="radio" name="q4" value="b">(B)Yes, he gets up at six every day</label><br>
+            <label><input type="radio" name="q4" value="c">(C)No, he gets up at six</label><br>
+            <label><input type="radio" name="q4" value="d">(D)No, he doesn’t get up at six every day</label>
+        </div>
+        
+        <div>
+            <p>5.My sister often watches TV after dinner, but my brother ___________.</p>
+            <label><input type="radio" name="q5" value="a">(A)always does</label><br>
+            <label><input type="radio" name="q5" value="b">(B)sometimes do</label><br>
+            <label><input type="radio" name="q5" value="c">(C)never do</label><br>
+            <label><input type="radio" name="q5" value="d">(D)seldom does</label>
+        </div>
+
+        <div>
+            <p>6.Frank: Who ____ long legs? Helen: Abby ____.</p>
+            <label><input type="radio" name="q6" value="a">(A)has ; has</label><br>
+            <label><input type="radio" name="q6" value="b">(B)has ; does</label><br>
+            <label><input type="radio" name="q6" value="c">(C)have ; has</label><br>
+            <label><input type="radio" name="q6" value="d">(D)have ; does</label>
+        </div>
+
+        <div>
+            <p>7.Gina: Honey, ____ nice to other people and they will be nice to you. Ben: Ok, Mom.</p>
+            <label><input type="radio" name="q7" value="a">(A)always be</label><br>
+            <label><input type="radio" name="q7" value="b">(B)be always</label><br>
+            <label><input type="radio" name="q7" value="c">(C)never be</label><br>
+            <label><input type="radio" name="q7" value="d">(D)be never</label>
+        </div>
+
+        <div>
+            <p>8.Judy: Do you watch TV every day? Jenny: ___________.</p>
+            <label><input type="radio" name="q8" value="a">(A)No, only on Sundays</label><br>
+            <label><input type="radio" name="q8" value="b">(B)Yes, I sometimes do</label><br>
+            <label><input type="radio" name="q8" value="c">(C)No, I watch TV every day</label><br>
+            <label><input type="radio" name="q8" value="d">(D)Yes, once a week</label>
+        </div>
+
+        <div>
+            <p>9.I’m always late for school, but my sisters ___________.</p>
+            <label><input type="radio" name="q9" value="a">(A)never do</label><br>
+            <label><input type="radio" name="q9" value="b">(B)never does</label><br>
+            <label><input type="radio" name="q9" value="c">(C)never is</label><br>
+            <label><input type="radio" name="q9" value="d">(D)never are</label>
+        </div>
+
+        <div>
+            <p>10.Molly: Sam,  ___________ talk in class. Sam: I’m sorry.</p>
+            <label><input type="radio" name="q10" value="a">(A)doesn’t</label><br>
+            <label><input type="radio" name="q10" value="b">(B)isn’t</label><br>
+            <label><input type="radio" name="q10" value="c">(C)never</label><br>
+            <label><input type="radio" name="q10" value="d">(D)can’t</label>
+        </div>
+
+        <h2>二、Cloze: 請根據文意選擇最適合的答案(每題4分)</h2>
+        <p>Zac: You look tired, Yuki. ____11____ do you go to bed?<br>
+            Yuki: At one a.m.<br>
+            Zac: One a.m.? ____12____ What do you do after work?<br>
+            Yuki: I cook dinner from seven to eight. Then I check my son’s homework ____27____ two hours. I also have a lot of<br> 
+            housework to do. I’m really tired. ____28____ <br>
+            Zac: You can buy dinner home and leave some housework to do on weekends.<br>
+            Yuki: That sounds great. <br>
+            Zac: Go to bed ____29____ , Yuki. Get more rest.<br>
+            Yuki: Ok. Thanks, Zac.</p>
+            <div>
+                <p>11.
+                <label><input type="radio" name="q11" value="a">(A)What time</label> 
+                <label><input type="radio" name="q11" value="b">(B)How often</label>
+                <label><input type="radio" name="q11" value="c">(C)Why</label>
+                <label><input type="radio" name="q11" value="d">(D)Why not</label></p>
+            </div>
+            <div>
+                <p>12.
+                <label><input type="radio" name="q12" value="a">(A)What time?</label> 
+                <label><input type="radio" name="q12" value="b">(B)How often?</label>
+                <label><input type="radio" name="q12" value="c">(C)Why?</label>
+                <label><input type="radio" name="q12" value="d">(D)Why not?</label></p>
+            </div>
+            <div>
+                <p>13.
+                <label><input type="radio" name="q13" value="a">(A)from</label> 
+                <label><input type="radio" name="q13" value="b">(B)for</label>
+                <label><input type="radio" name="q13" value="c">(C)to</label>
+                <label><input type="radio" name="q13" value="d">(D)at</label></p>
+            </div>
+            <div>
+                <p>14.
+                <label><input type="radio" name="q14" value="a">(A)How come?</label> 
+                <label><input type="radio" name="q14" value="b">(B)Where can I buy dinner?</label>
+                <label><input type="radio" name="q14" value="c">(C)When can I do?</label>
+                <label><input type="radio" name="q14" value="d">(D)What can I do?</label></p>
+            </div>
+            <div>
+                <p>15.
+                <label><input type="radio" name="q15" value="a">(A)late</label> 
+                <label><input type="radio" name="q15" value="b">(B)early</label>
+                <label><input type="radio" name="q15" value="c">(C)at night</label>
+                <label><input type="radio" name="q15" value="d">(D)in the morning</label></p>
+            </div>
+    
+            <h2>三、Reading Comprehension: 請根據文意，選擇最適合的答案。 (每題4分)</h2>
+            <p>
+                【A】 <br>
+                Many people are busy and reading is not always at the<br>
+                top of their list. But, if you want to be successful in life, it’s<br> 
+                important to read. How many days a week should you<br> 
+                read? You should read around 5 days a week. Reading<br> 
+                everyday isn’t recommended because your brain needs to<br> 
+                rest to better absorb new things. You need to have a bal<br>
+                ance between work, family, friends, and other hobbies<br> 
+                you love, so you can be successful in life. How long should<br> 
+                you read a day? Reading 30 minutes a day is enough, and<br> 
+                no more than an hour. Reading too much will make you<br> 
+                tired. What is the best time to read a book? The best time<br>
+                to read a book is when you feel you want to do it. Some<br>
+                people like to read at night before bed, and others may<br> 
+                want to start reading in the morning. Just choose what<br> 
+                works for you. But one study shows reading early in the<br> 
+                morning is better than before bedtime.<br>
+                <br>
+                list清單   successful成功的   because因為   brain腦   rest休息   better absorb更好地吸收<br> 
+                balance平衡  hobby嗜好  choose選擇
+
+            </p>
+            <div>
+                <p>16.How often should you read? <br>
+                <label><input type="radio" name="q16" value="a">(A)Every day.</label><br>
+                <label><input type="radio" name="q16" value="b">(B)Every 5 days.</label><br>
+                <label><input type="radio" name="q16" value="c">(C)Every week.</label><br>
+                <label><input type="radio" name="q16" value="d">(D)About 5 days a week.</label>
+            </p>
+            </div>
+        <br>
+        <button type="button" onclick="showAnswers()">提交</button>
+        <script src="submitQuiz1.js"></script>
+    </form>
+    <div id="result" class="result"></div>
+</body>
+</html>

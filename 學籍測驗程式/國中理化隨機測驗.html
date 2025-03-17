@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <title>選擇題與填充題解答及計分</title>
+    <style>
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        canvas{
+            display: block;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h2>選擇題 (每題4分)</h2>
+    <form id="quizForm">
+        <!-- 選擇題 -->
+        <div>
+            <p>1.<u>雯雯</u>整理了「誤差」概念的筆記，下列內容何者<u>錯誤</u>？</p>
+            <label><input type="radio" name="q1" value="a">(A)選用最小刻度越小的測量儀器，測量結果就會
+                越準確</label><br>
+            <label><input type="radio" name="q1" value="b">(B)正確測量後得到的測量值，仍可能與實際值不
+                同</label><br>
+            <label><input type="radio" name="q1" value="c">(C)不同測量者只要使用相同工具進行測量，就一
+                定能得到相同的測量結果</label><br>
+            <label><input type="radio" name="q1" value="d">(D)多次測量求平均值時，應先把明顯與其他數據
+                相差太多的測結果刪除，再求平均值</label>
+        </div>
+
+        <div>
+            <p>2.老師請五位同學測量同一個書櫃的寬度，五位同學的測量結果如下表，請問應如何表示該書<br>
+                櫃寬度的測量結果？</p>
+                <table class="table-bordered" style="margin-top:1px;">
+                    <tr>
+                        <th>測量者</th>
+                        <th>甲甲</th>
+                        <th>乙乙</th>
+                        <th>丙丙</th>
+                        <th>丁丁</th>
+                        <th>戊戊</th>
+                    </tr>
+                    <tr>
+                        <td>測量結果<br>
+                            (公分)</td>
+                        <td>60.02</td>
+                        <td>60.05</td>
+                        <td>60.04</td>
+                        <td>60.01</td>
+                        <td>23.63</td>
+                    </tr>
+                </table>
+            <label><input type="radio" name="q2" value="a">(A)60.04公分</label><br>
+            <label><input type="radio" name="q2" value="b">(B)60.03公分</label><br>
+            <label><input type="radio" name="q2" value="c">(C)60.02公分</label><br>
+            <label><input type="radio" name="q2" value="d">(D)60.01公分</label>
+        </div>
+
+        <div>
+            <p>3.使用已歸零的上皿天平測量物體時，若右盤放置的砝碼為 50 公克 1 個、20 公克 1 個<br>
+                、10 公克 1 個、300毫克砝碼 1 片，則此物體質量應紀錄為多少公克？<br>
+                (此天秤可測量的最小刻度單位為 100 毫克)</p>
+            <label><input type="radio" name="q3" value="a">(A)77.00</label><br>
+            <label><input type="radio" name="q3" value="b">(B)79.70</label><br>
+            <label><input type="radio" name="q3" value="c">(C)80.30</label><br>
+            <label><input type="radio" name="q3" value="d">(D)83.00</label>
+        </div>
+
+        <div>
+            <p>4.有一個密度為 7.1 公克/立方公分的正立方體鋅塊，若將其對切成兩半，則半個鋅塊的密度<br>
+                為多少公克立方公分？</p>
+            <label><input type="radio" name="q4" value="a">(A)3.55</label><br>
+            <label><input type="radio" name="q4" value="b">(B)7.1</label><br>
+            <label><input type="radio" name="q4" value="c">(C)14.7</label><br>
+            <label><input type="radio" name="q4" value="d">(D)以上皆有可能</label>
+        </div>
+        
+        <div>
+            <p>5.物質變化可以區分為物理變化與化學變化，請判斷下列選項中，何者的物質變化與其他三者<br>
+                <u>不同</u>？</p>
+            <label><input type="radio" name="q5" value="a">(A)冰雪融化</label><br>
+            <label><input type="radio" name="q5" value="b">(B)露水蒸發</label><br>
+            <label><input type="radio" name="q5" value="c">(C)生米煮熟</label><br>
+            <label><input type="radio" name="q5" value="d">(D)粉筆斷裂</label>
+        </div>
+
+        <div>
+            <p>6.小吃店老闆利用撈網，將煮熟的水餃從沸水中撈起，請問此作法所應用的原理，與下列<br>
+                何者相同？</p>
+            <label><input type="radio" name="q6" value="a">(A)曬鹽是將海水中的水分蒸發分離出來，留下食<br>
+                鹽結晶</label><br>
+            <label><input type="radio" name="q6" value="b">(B)將混濁的泥漿靜置一段時間後，泥沙會沉澱在<br>
+                下層</label><br>
+            <label><input type="radio" name="q6" value="c">(C)利用濾紙，將一種彩色筆的色彩，分離出不同的色素</label><br>
+            <label><input type="radio" name="q6" value="d">(D)泡咖啡時，會利用濾紙把咖啡豆渣和咖啡液分<br>
+                離</label>
+        </div>
+
+        <div>
+            <p>7.茶道老師將 15 公克的檸檬茶粉完全溶於 150 公克的水中，則關於此杯檸檬茶的敘<br>
+                述，下列何者錯誤？</p>
+            <label><input type="radio" name="q7" value="a">(A)此杯檸檬茶的重量百分率濃度為10%</label><br>
+            <label><input type="radio" name="q7" value="b">(B)溶質質量為 15 公克</label><br>
+            <label><input type="radio" name="q7" value="c">(C)溶劑質量為 150 公克</label><br>
+            <label><input type="radio" name="q7" value="d">(D)溶液質量為 165 公克</label>
+        </div>
+
+        <div>
+            <p>8.人類的生存離不開空氣，下圖為乾燥空氣(不含水氣)的組成成分示意圖，請問下列有<br>
+                關空氣的敘述何者正確？</p>
+            <label><input type="radio" name="q8" value="a">(A)甲氣體可用於焊接金屬時，防止金屬與氧反應</label><br>
+            <label><input type="radio" name="q8" value="b">(B)乙、丙、丁均為純物質</label><br>
+            <label><input type="radio" name="q8" value="c">(C)丁氣體不易發生反應，屬於鈍氣</label><br>
+            <label><input type="radio" name="q8" value="d">(D)點燃的線香在乙氣體中會燃燒更旺盛</label>
+            <canvas id="pieChart" width="250px" height="250px"></canvas>
+        </div>
+
+        <div>
+            <p>9.婷婷設計實驗想要驗證假設，實驗如下：在相同的鍋子中，分別裝入相同溫度、但體<br>
+                積不同的水，再以同一個電磁爐的最大火力加熱，測量水加熱到沸騰所需的時間，則<br>
+                婷婷的假設最可能為下列何者？</p>
+            <label><input type="radio" name="q9" value="a">(A)水的溫度可能會影響水煮沸所需的時間</label><br>
+            <label><input type="radio" name="q9" value="b">(B)水的體積可能會影響水煮沸所需的時間</label><br>
+            <label><input type="radio" name="q9" value="c">(C)水的溫度與體積可能會影響水煮沸所需的時間</label><br>
+            <label><input type="radio" name="q9" value="d">(D)電磁爐的火力可能會影響水煮沸所需的時間</label>
+        </div>
+
+        <div>
+            <p>10.有關量筒的使用，下列何者正確？<br>
+                甲：可用來測量液體的體積<br>
+                乙：可利用排水法測量固體的體積<br>
+                丙：可在其中進行化學反應<br>
+                丁：讀取刻度時，視線須平視液體中央處</p>
+            <label><input type="radio" name="q10" value="a">(A)甲丁</label><br>
+            <label><input type="radio" name="q10" value="b">(B)乙丙</label><br>
+            <label><input type="radio" name="q10" value="c">(C)乙丁</label><br>
+            <label><input type="radio" name="q10" value="d">(D)甲乙丁</label>
+        </div>
+
+        <div>
+            <p>11.<u>發發</u>利用排水法測量一個塑膠球的體積，在過程中他發現塑膠球會浮在水面上，所以<br>
+                將實驗步驟做了些許調整，<u>發發</u>進行的步驟如下：<br>
+                一、取適當大小的量筒，在量筒中裝入水，紀錄水面位置刻度為 A 毫升<br>
+                二、將塑膠球放入量筒中，待水面靜止後，紀錄水面位置刻度為 B 毫升<br>
+                三、以細繩的兩端分別綁住塑膠球和金屬球，將兩者放入量筒中，待兩者<br>
+                完全沉入水面下，且水面靜止後，紀錄水面位置刻度為 C 毫升<br>
+                四、解開綁住塑膠球的細繩，將塑膠球取出量筒，細繩及金屬球放入量筒<br>
+                中，待其完全沉入水面下，且水面靜止後，紀錄水面位置刻度為 D 毫升<br>
+                已知在實驗步驟二、三、四中，未放入塑膠球或金屬球時，量筒內水面位<br>
+                置刻度均為 A 毫升，則塑膠球的體積應為多少？</p>
+            <label><input type="radio" name="q11" value="a">(A)C-D立方公分</label><br>
+            <label><input type="radio" name="q11" value="b">(B)D-B立方公分</label><br>
+            <label><input type="radio" name="q11" value="c">(C)C-D-A立方公分</label><br>
+            <label><input type="radio" name="q11" value="d">(D)D-B-A立方公分</label>
+        </div>
+
+        <div>
+            <p>12.<u>浩浩</u>在打掃家裡時發現一枚金色戒指，他想要知道此戒指是否為純金打造，因此進行<br>
+                了下列兩步驟的操作，從操作結果，可以推測此戒指的材質最可能為下列何者？<br>
+                一、將戒指放在已歸零的電子天平上，顯示為 16.0g<br>
+                二、將戒指放入裝有 10 毫升水的量筒內，待戒指沉<br>
+                入底部時，發現水面位置刻度為 12 毫升。</p>
+                <table class="table-bordered" style="margin-top:1px;">
+                    <tr>
+                        <th>物質</th>
+                        <th>金</th>
+                        <th>銀</th>
+                        <th>銅</th>
+                        <th>鐵</th>
+                    </tr>
+                    <tr>
+                        <td>密度<br>
+                            (g/cm3)</td>
+                        <td>19.3</td>
+                        <td>10.5</td>
+                        <td>8.9</td>
+                        <td>7.9</td>
+                    </tr>
+                </table>
+            <label><input type="radio" name="q12" value="a">(A)金</label><br>
+            <label><input type="radio" name="q12" value="b">(B)銀</label><br>
+            <label><input type="radio" name="q12" value="c">(C)銅</label><br>
+            <label><input type="radio" name="q12" value="d">(D)鐵</label>
+        </div>
+        
+        <div>
+            <p>13.最近有篇新聞報導，其標題為：「英特爾放棄 Intel20 Å ，Arrow Lake 處理器交給<br>
+                台積電代工。」其中Å 指的是長度單位─埃米，已知埃米的長度比奈米小 10 倍，試問 20<br>
+                埃米的長度應和下列何者等長？</p>
+            <label><input type="radio" name="q13" value="a">(A)200奈米</label><br>
+            <label><input type="radio" name="q13" value="b">(B)20奈米</label><br>
+            <label><input type="radio" name="q13" value="c">(C)2奈米</label><br>
+            <label><input type="radio" name="q13" value="d">(D)0.2奈米</label>
+        </div>
+
+        <div>
+            <p>14.在使用上皿天平測量物體質量前，發現天秤指針偏右，請問若想要將此天平歸零，該如<br>
+                何調整校準螺絲？</p>
+            <label><input type="radio" name="q14" value="a">(A)左側固定，右側右旋</label><br>
+            <label><input type="radio" name="q14" value="b">(B)左側右旋，右側固定</label><br>
+            <label><input type="radio" name="q14" value="c">(C)左側固定，右側左旋</label><br>
+            <label><input type="radio" name="q14" value="d">(D)左側左旋，右側右旋</label>
+        </div>
+
+        <div>
+            <p>15.<u>顆顆</u>測量一物體的長度，結果為 12.345 公尺，則他所用的尺最小刻度應為多少？</p>
+            <label><input type="radio" name="q15" value="a">(A)1公分</label><br>
+            <label><input type="radio" name="q15" value="b">(B)0.1公尺</label><br>
+            <label><input type="radio" name="q15" value="c">(C)0.01公里</label><br>
+            <label><input type="radio" name="q15" value="d">(D)0.001公尺</label>
+        </div>
+
+        <div>
+            <p>16.同質量的三個物體甲、乙、丙，已知其體積比依序為1：2：3，則密度比依序為何？</p>
+            <label><input type="radio" name="q16" value="a">(A)1:2:3</label><br>
+            <label><input type="radio" name="q16" value="b">(B)3:2:1</label><br>
+            <label><input type="radio" name="q16" value="c">(C)1:1:1</label><br>
+            <label><input type="radio" name="q16" value="d">(D)6:3:2</label>
+        </div>
+
+        <div>
+            <p>17.下列哪些方法可以改變金塊的密度？<br>
+                甲：切成兩半(溫度未改變)<br>
+                乙：敲打改變形狀(溫度未改變)<br>
+                丙：加熱使金塊膨脹</p>
+            <label><input type="radio" name="q17" value="a">(A)甲乙</label><br>
+            <label><input type="radio" name="q17" value="b">(B)乙丙</label><br>
+            <label><input type="radio" name="q17" value="c">(C)丙</label><br>
+            <label><input type="radio" name="q17" value="d">(D)甲乙丙皆可</label>
+        </div>
+
+        <div>
+            <p>18.正在沸騰的開水，在壺嘴常見冒出白霧，請問產生白霧的過程中，這是甚麼現象？</p>
+            <label><input type="radio" name="q18" value="a">(A)凝解</label><br>
+            <label><input type="radio" name="q18" value="b">(B)汽化</label><br>
+            <label><input type="radio" name="q18" value="c">(C)昇華</label><br>
+            <label><input type="radio" name="q18" value="d">(D)蒸發</label>
+        </div>
+
+        <div>
+            <p>19.物理變化和化學變化的區別主要在於下列何者的改變？</p>
+            <label><input type="radio" name="q19" value="a">(A)三態的轉換</label><br>
+            <label><input type="radio" name="q19" value="b">(B)顏色的變化</label><br>
+            <label><input type="radio" name="q19" value="c">(C)質量的改變</label><br>
+            <label><input type="radio" name="q19" value="d">(D)新物質的產生</label>
+        </div>
+
+        <div>
+            <p>20.關於正常人類呼出的氣體，下列敘述何者正確？</p>
+            <label><input type="radio" name="q20" value="a">(A)呼出的氣體以二氧化碳為主</label><br>
+            <label><input type="radio" name="q20" value="b">(B)呼出的主要氣體和充填在食品包裝內氣體相同</label><br>
+            <label><input type="radio" name="q20" value="c">(C)其氣體可以焊接金屬使用</label><br>
+            <label><input type="radio" name="q20" value="d">(D)該氣體和雙氧水 + 二氧化錳產生的氣體相同</label>
+        </div>
+
+        <div>
+            <p>21.勞動部職業安全衛生暑有份關於「硫化氫」中毒的參考指引，內容為：『50至100ppm<br>
+                會造成輕微的眼睛及呼吸道刺激，100 至 150 ppm 會使嗅神經麻痺，500至700ppm會<br>
+                使人在數分鐘內昏迷、一小時內死亡，700 至 1000ppm 會導致立刻昏迷、數分鐘內死亡<br>
+                ，如果高於 1000ppm 可能會 造成人類立即死亡。』若教室的空間大小約為 500 立方公<br>
+                尺，試問，至少需要多少體積的硫化氫可以使人在教室內立即昏迷？</p>
+            <label><input type="radio" name="q21" value="a">(A)0.35立方公尺</label><br>
+            <label><input type="radio" name="q21" value="b">(B)0.70立方公尺</label><br>
+            <label><input type="radio" name="q21" value="c">(C)3500立方公分</label><br>
+            <label><input type="radio" name="q21" value="d">(D)7000立方公分</label>
+        </div>
+
+        <div>
+            <p>22.現有一瓶 100%的無水酒精 600 毫升，其密度為 0.8公克/立方公分，若要將此無水酒<br>
+                精調配成 75%的消毒用酒精，需添加水至總體積多少毫升？</p>
+            <label><input type="radio" name="q22" value="a">(A)750毫升</label><br>
+            <label><input type="radio" name="q22" value="b">(B)800毫升</label><br>
+            <label><input type="radio" name="q22" value="c">(C)1000毫升</label><br>
+            <label><input type="radio" name="q22" value="d">(D)1050毫升</label>
+        </div>
+
+        <div>
+            <p>23.已知某物質在 30°C 時，飽和水溶液的重量百分率濃度為 20%，則該溫度物質的溶解度
+                表示為下列何者？</p>
+            <label><input type="radio" name="q23" value="a">(A)30g/100g 水</label><br>
+            <label><input type="radio" name="q23" value="b">(B)25g/100g 水</label><br>
+            <label><input type="radio" name="q23" value="c">(C)20g/100g 水</label><br>
+            <label><input type="radio" name="q23" value="d">(D)20g/120g 水</label>
+        </div>
+
+        <div>
+            <p>24.下列哪一項為粗鹽精製的順序？</p>
+            <label><input type="radio" name="q24" value="a">(A)過濾→蒸發→溶解→結晶</label><br>
+            <label><input type="radio" name="q24" value="b">(B)蒸發→溶解→過濾→結晶</label><br>
+            <label><input type="radio" name="q24" value="c">(C)溶解→過濾→蒸發→結晶</label><br>
+            <label><input type="radio" name="q24" value="d">(D)溶解→蒸發→過濾→結晶</label>
+        </div>
+
+        <div>
+            <p>25.關於色層分析法的敘述，下列何者錯誤？</p>
+            <label><input type="radio" name="q25" value="a">(A)分離出的物質一定是純物質</label><br>
+            <label><input type="radio" name="q25" value="b">(B)濾紙可用其他材質代替</label><br>
+            <label><input type="radio" name="q25" value="c">(C)此方法不涉及化學反應</label><br>
+            <label><input type="radio" name="q25" value="d">(D)所使用的溶劑，可視實驗條件做更換</label>
+        </div>
+        
+        <h3>題組題】</h3>
+        <p>如右圖，此為硝酸鉀在不同<br>
+            溫度下對 100 克水的溶解度<br>
+            現將 80 公克的硝酸鉀投入<br>
+            200 公克的 20°C 水中，<br>
+            試回答 26~28 題。</p>
+        <div>
+            <p>26.硝酸鉀溶於水時，溫度未改變，也忽略水的蒸發，試問該杯水溶液於 20°C<br>
+                時應為何種溶液？</p>
+            <label><input type="radio" name="q26" value="a">(A)未飽和溶液</label><br>
+            <label><input type="radio" name="q26" value="b">(B)飽和溶液</label><br>
+            <label><input type="radio" name="q26" value="c">(C)過飽和溶液</label><br>
+            <label><input type="radio" name="q26" value="d">(D)以上皆有可能</label>
+        </div>    
+        
+        <div>
+            <p>27.將水溶液溫度提高至 30°C，試問該杯溶液的種類(未飽和、飽和、過飽和)和
+                濃度對比 20°C 時有何改變？</p>
+            <label><input type="radio" name="q27" value="a">(A)種類不變、濃度提高</label><br>
+            <label><input type="radio" name="q27" value="b">(B)種類改變、濃度提高</label><br>
+            <label><input type="radio" name="q27" value="c">(C)種類不變、濃度不變</label><br>
+            <label><input type="radio" name="q27" value="d">(D)種類改變、濃度不變</label>
+        </div>
+        
+        <div>
+            <p>28.若將水溶液溫度持續上升至 40°C，此時水溶液的重量百分率濃度應約為多少%？</p>
+            <label><input type="radio" name="q27" value="a">(A)28.5%</label><br>
+            <label><input type="radio" name="q27" value="b">(B)37.5%</label><br>
+            <label><input type="radio" name="q27" value="c">(C)40%</label><br>
+            <label><input type="radio" name="q27" value="d">(D)60%</label>
+        </div>
+
+        <br>
+        <button type="button" onclick="showAnswers()">提交</button>
+        <script src="submitQuiz3.js"></script>
+    </form>
+    <div id="result" class="result"></div>
+    <script>
+        const canvas = document.getElementById('pieChart');
+        const ctx = canvas.getContext('2d');
+
+        // 資料
+        const data = [78, 21, 0.9, 0.1];
+        const labels = ['甲氣體78%', '乙氣體21%', '丙氣體0.9%', '丁氣體0.1%'];
+        const total = data.reduce((sum, value) => sum + value, 0);
+        let startAngle = 0;
+
+        // 繪製圓餅圖
+        data.forEach((value, index) => {
+            const sliceAngle = (value / total) * 2 * Math.PI;
+
+            // 繪製每一片
+            ctx.beginPath();
+            ctx.moveTo(150, 150);
+            ctx.arc(150, 150, 100, startAngle, startAngle + sliceAngle);
+            ctx.closePath();
+            ctx.fillStyle = '#fff'; // 填充顏色為白色
+            ctx.fill();
+            ctx.stroke(); // 加上邊框以分隔每一片
+
+            // 繪製標註文字
+            const textX = 150 + (60) * Math.cos(startAngle + sliceAngle / 2);
+            const textY = 150 + (60) * Math.sin(startAngle + sliceAngle / 2);
+            ctx.fillStyle = '#000'; // 文字顏色為黑色
+            ctx.fillText(labels[index], textX, textY);
+
+            startAngle += sliceAngle;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇題測驗</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answer {
+            color: green;
+            font-weight: bold;
+            display: none; /* 初始隱藏答案 */
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>選擇題測驗</h1>
+    <form id="quizForm">
+        <div class="question">
+            <p><strong>1. 在職場比賽中ERA值是一個投手表現的重要統計數值。其計算方式如下：若此投手共主投n局，其總責任失分為E，則其ERA值為(E/n)×9。有一位投手在之前的比賽中共主投90局，且這90局中他的ERA值為3.6。在最新的一場比賽中此投手主投6局無責任失分，則打完這一場比賽後，此投手的ERA值成為</strong></p>
+            <input type="text" id="q1" name="q1">
+            <p class="answer">答案: 3.375</p>
+        </div>
+
+        <div class="question">
+            <p><strong>2. 什麼是水的化學式？</strong></p>
+            <ul>
+                <li><input type="radio" name="q2" value="A"> A. H2O</li>
+                <li><input type="radio" name="q2" value="B"> B. CO2</li>
+                <li><input type="radio" name="q2" value="C"> C. O2</li>
+                <li><input type="radio" name="q2" value="D"> D. N2</li>
+            </ul>
+            <p class="answer">答案: A. H2O</p>
+        </div>
+
+        <div class="question">
+            <p><strong>3. 人類的主要呼吸氣體是什麼？</strong></p>
+            <ul>
+                <li><input type="radio" name="q3" value="A"> A. 氧氣</li>
+                <li><input type="radio" name="q3" value="B"> B. 二氧化碳</li>
+                <li><input type="radio" name="q3" value="C"> C. 氮氣</li>
+                <li><input type="radio" name="q3" value="D"> D. 氫氣</li>
+            </ul>
+            <p class="answer">答案: A. 氧氣</p>
+        </div>
+
+        <div class="question">
+            <p><strong>4. 太陽系中最大的行星是什麼？</strong></p>
+            <ul>
+                <li><input type="radio" name="q4" value="C"> C. 木星</li>
+                <li><input type="radio" name="q4" value="A"> A. 地球</li>
+                <li><input type="radio" name="q4" value="B"> B. 土星</li>
+                <li><input type="radio" name="q4" value="D"> D. 火星</li>
+            </ul>
+            <p class="answer">答案: C. 木星</p>
+        </div>
+
+        <div class="question">
+            <p><strong>5. 人類的基因物質是什麼？</strong></p>
+            <ul>
+                <li><input type="radio" name="q5" value="B"> B. DNA</li>
+                <li><input type="radio" name="q5" value="A"> A. RNA</li>
+                <li><input type="radio" name="q5" value="C"> C. 蛋白質</li>
+                <li><input type="radio" name="q5" value="D"> D. 碳水化合物</li>
+            </ul>
+            <p class="answer">答案: B. DNA</p>
+        </div>
+
+        <button type="submit">提交</button>
+    </form>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // 防止表單提交
+            let score = 0;
+            const answers = document.querySelectorAll('.answer');
+
+            // 顯示每道題的答案
+            answers.forEach(answer => {
+                answer.style.display = 'block';
+            });
+
+            // 計算分數
+            const correctAnswers = {
+                q1: '3.375',
+                q2: 'A',
+                q3: 'A',
+                q4: 'C',
+                q5: 'B'
+            };
+
+            for (let i = 1; i <= 5; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected && selected.value === correctAnswers[`q${i}`]) {
+                    score += 4; // 每題4分
+                }
+            }
+
+            // 顯示結果
+            document.getElementById('result').textContent = `您的分數是: ${score} / 20`;
+        });
+    </script>
+</body>
+</html>
+//這是用===>請用html撰寫一個有5個選擇題題目，提交後顯示各自解答，並計算分數，每題4分

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇題測驗</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answer {
+            margin-top: 10px;
+            color: green;
+            display: none; /* 初始隱藏答案 */
+        }
+        .score {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>選擇題測驗</h1>
+    <div id="quizContainer"></div>
+    <button onclick="submitQuiz()">提交答案</button>
+    <div id="result" class="score"></div>
+
+    <script>
+        const allQuestions = [
+            {
+                question: "1. 問題一是什麼？",
+                options: ["選項 A", "選項 B", "選項 C", "選項 D"],
+                answer: "A"
+            },
+            {
+                question: "2. 問題二是什麼？",
+                options: ["選項 A", "選項 B", "選項 C", "選項 D"],
+                answer: "B"
+            },
+            {
+                question: "3. 問題三是什麼？",
+                options: ["選項 A", "選項 B", "選項 C", "選項 D"],
+                answer: "C"
+            },
+            {
+                question: "4. 問題四是什麼？",
+                options: ["選項 A", "選項 B", "選項 C", "選項 D"],
+                answer: "D"
+            },
+            {
+                question: "5. 問題五是什麼？",
+                options: ["選項 A", "選項 B", "選項 C", "選項 D"],
+                answer: "A"
+            }
+        ];
+
+        function getRandomQuestions(num) {
+            const shuffled = allQuestions.sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, num);
+        }
+
+        function renderQuestions() {
+            const selectedQuestions = getRandomQuestions(3);
+            const container = document.getElementById('quizContainer');
+            selectedQuestions.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question';
+                
+                questionDiv.innerHTML = `<h3>${q.question}</h3>`;
+                q.options.forEach((option, i) => {
+                    questionDiv.innerHTML += `
+                        <label>
+                            <input type="radio" name="q${index + 1}" value="${String.fromCharCode(65 + i)}"> ${option}
+                        </label><br>
+                    `;
+                });
+                questionDiv.innerHTML += `<div id="answer-q${index + 1}" class="answer">正確答案是：${q.answer}</div>`;
+                container.appendChild(questionDiv);
+            });
+        }
+
+        function submitQuiz() {
+            let score = 0;
+            const questions = document.querySelectorAll('.question');
+            questions.forEach((q, index) => {
+                const selectedOption = q.querySelector(`input[type="radio"]:checked`);
+                const answerDiv = document.getElementById(`answer-q${index + 1}`);
+                answerDiv.style.display = 'block'; // 顯示答案
+
+                if (selectedOption && selectedOption.value === questions[index].answer) {
+                    score += 4; // 每題4分
+                }
+            });
+            document.getElementById('result').innerText = score +"/"+ questions.length * 4;
+        }
+
+        // 初始化問題
+        renderQuestions();
+    </script>
+</body>
+</html>

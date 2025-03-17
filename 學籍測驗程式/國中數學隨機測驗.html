@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇題與填充題解答及計分</title>
+    <style>
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>選擇題 (每題4分)</h2>
+    <form id="quizForm">
+        <!-- 選擇題 -->
+        <div>
+            <p>1.下列敘述何者正確？</p>
+            <label><input type="radio" name="q1" value="a">(A)坐標平面上，點 A（3 ,－5）的 x 坐標為－5。</label><br>
+            <label><input type="radio" name="q1" value="b">(B)坐標平面上，點 B（－1 , 4）的縱坐標為 4。</label><br>
+            <label><input type="radio" name="q1" value="c">(C)坐標平面上，點 E（0 , 3）在 x 軸上。</label><br>
+            <label><input type="radio" name="q1" value="d">(D)坐標平面上，點 P（－4 , 3）到 y 軸的距離為 3。</label>
+        </div>
+
+        <div>
+            <p>2.下列敘述何者錯誤？</p>
+            <label><input type="radio" name="q2" value="a">(A)坐標平面上，點 P（－5 , 3）的位置在第二象限。</label><br>
+            <label><input type="radio" name="q2" value="b">(B)假設 a 為常數，且 a≠0，若 A（a , －2a）在坐標平面上，則 A 點在第一象限或第三象限。</label><br>
+            <label><input type="radio" name="q2" value="c">(C)如果 a＜0，b＞0，則（a2 ,－b）在第四象限。</label><br>
+            <label><input type="radio" name="q2" value="d">(D)在坐標平面上，P（a＋3 , a－5）是 x 軸上的一點，則 a＝5。</label>
+        </div>
+
+        <div>
+            <p>3.<u>融因</u>班級慶生，向飲料店訂購每杯 12 元的綠茶 x 杯及每杯 15 元的梅子綠茶 y 杯，若融融付仟元鈔票 1 張應找<br>
+                回多少元？</p>
+            <label><input type="radio" name="q3" value="a">(A)12x＋15y</label><br>
+            <label><input type="radio" name="q3" value="b">(B)1000－12x＋15y</label><br>
+            <label><input type="radio" name="q3" value="c">(C)1000－12x－15y</label><br>
+            <label><input type="radio" name="q3" value="d">(D)1000－(12x－15y) 元</label>
+        </div>
+
+        <div>
+            <p>4.某商店促銷活動，買 3 包餅乾和 2 個麵包，僅需 115 元。若妮妮至此商店購買 6 包餅乾和 4 個麵包，付 500 元鈔<br>
+                票一張，應可找回多少元？</p>
+            <label><input type="radio" name="q4" value="a">(A)270</label><br>
+            <label><input type="radio" name="q4" value="b">(B)385</label><br>
+            <label><input type="radio" name="q4" value="c">(C)115</label><br>
+            <label><input type="radio" name="q4" value="d">(D)230</label>
+        </div>
+        
+        <div>
+            <p>5.在座標平面上與點（－3 , 0）相距 5 個單位長的點有幾個？</p>
+            <label><input type="radio" name="q5" value="a">(A)1</label><br>
+            <label><input type="radio" name="q5" value="b">(B)2</label><br>
+            <label><input type="radio" name="q5" value="c">(C)4</label><br>
+            <label><input type="radio" name="q5" value="d">(D)無限多個</label>
+        </div>
+
+        <div>
+            <p>6.丞丞在解方程式{3x-y=5...○1 7x=2y+3...○2} 時，先將○1 式整理成下列哪一個方程式，再代入○2 式，可消去○2 式中的 y？</p>
+            <label><input type="radio" name="q6" value="a">(A)y = -5+3x</label><br>
+            <label><input type="radio" name="q6" value="b">(B)y = 5-3x</label><br>
+            <label><input type="radio" name="q6" value="c">(C)x=(2y+3)/7</label><br>
+            <label><input type="radio" name="q6" value="d">(D)x=(y+5)/3</label>
+        </div>
+
+        <div>
+            <p>7.下列哪一組 x、y 是二元一次聯立方程式{x+y=7 10x+5y=60} 的解？</p>
+            <label><input type="radio" name="q7" value="a">(A)x=6,y=1</label><br>
+            <label><input type="radio" name="q7" value="b">(B)x=2,y=5</label><br>
+            <label><input type="radio" name="q7" value="c">(C)x=5,y=2</label><br>
+            <label><input type="radio" name="q7" value="d">(D)x=-5,y=12</label>
+        </div>
+
+        <div>
+            <p>8.一服飾店出清存貨，以定價打六折出售的衣服售價為 x 元，店家可獲利 y 元，則這件衣服的成本為多少元？</p>
+            <label><input type="radio" name="q8" value="a">(A)x+y</label><br>
+            <label><input type="radio" name="q8" value="b">(B)x-y</label><br>
+            <label><input type="radio" name="q8" value="c">(C)(5/3)x-y</label><br>
+            <label><input type="radio" name="q8" value="d">(D)(5/3)x+y</label>
+        </div>
+
+        <div>
+            <p>9.珊珊旅行團到森林遊樂區參觀，右表為兩種參觀方式與所需的纜車費用。<br>
+                已知旅行團的每個人皆從這兩種方式中選擇一種，且兩種方式皆不超過,<br>
+                (含)8 人，若他們纜車費用的總花費為 3100 元，則此旅行團的人數可能<br>
+                為多少人？
+                參觀方式 纜車費用
+                去程及回程均搭乘纜車 300 元
+                單程搭乘纜車，單程步行 200 元
+                </p>
+            <label><input type="radio" name="q9" value="a">(A)16</label><br>
+            <label><input type="radio" name="q9" value="b">(B)14</label><br>
+            <label><input type="radio" name="q9" value="c">(C)12</label><br>
+            <label><input type="radio" name="q9" value="d">(D)10</label>
+        </div>
+
+        <div>
+            <p>右圖(一)為小甄使用手機內的通訊軟體與小智對話的記錄。根據圖中
+                兩人的對話記錄，若下列有一種走法能從小甄家出發走到郵局，
+                則此走法為何？
+                </p>
+            <label><input type="radio" name="q10" value="a">(A)向北直走 700 公尺，再向西直走 100 公尺</label><br>
+            <label><input type="radio" name="q10" value="b">(B)向北直走 400 公尺，再向西直走 300 公尺</label><br>
+            <label><input type="radio" name="q10" value="c">(C)向南直走 400 公尺，再向東直走 300 公尺</label><br>
+            <label><input type="radio" name="q10" value="d">(D)向南直走 700 公尺，再向東直走 100 公尺</label>
+        </div>
+
+        <h2>填充題 (每題4分)</h2>
+        <!-- 填充題 -->
+        <div>
+            <p>1.請化簡(2x-y-5)/3-(x-3y-3)/2 =【 <input type="text" id="q11">】。</p>
+        </div>
+
+        <div>
+            <p>2.設 x＋6＝－8＝2x＋3y－1的解為x＝a,y＝b，則 b＝【 <input type="text" id="q12">】。</p>
+        </div>
+
+        <div>
+            <p>3.近期夾娃娃機店林立。弘弘夾夾家娃娃機店推出優惠如右圖(二)，小欣<br>
+                於初三至弘弘夾夾家花了 50 元，其中一般機台夾了 x 次、指定機台夾了<br>
+                y 次，由題目敘述可得二元一次方程式【 <input type="text" id="q13">】。</p>
+        </div>
+
+        <div>
+            <p>4.聯立方程式{29x+5y=112 7x-17y=57} 的解為 x＝a，y＝b 則 a＋b＝【 <input type="text" id="q14">】。</p>
+        </div>
+
+        <div>
+            <p>5.賢賢辦公室欲購買相同款式的椅子與桌子，已知 5 張椅子與 3 張桌子價錢相同，買 5 張椅子與 6 張桌子共付了 1800 元，
+                則 1 張桌子加 1 張椅子共計【 <input type="text" id="q15">】。</p>
+        </div>
+
+        <div>
+            <p>6.如下圖(三)，若 B、C 兩點與 y 軸的垂直距離均為 4 個單位長，則三角形 ABC 的面積為【 <input type="text" id="q16">】平方單位。</p>
+        </div>
+
+        <div>
+            <p>7.如上圖(四)，坐標平面上有 P、Q 兩點，其坐標分別為（－4 , a）、（b , 6）。根據 P、Q 點的位置，判別點（a－10, 5－b）<br>
+                落在第【 <input type="text" id="q17">】象限。
+            </p>
+        </div>
+
+        <div>
+            <p>8.如右圖(五)，在象棋盤上，如果把 的坐標定為（2 , 0）， 的坐標
+                定為（6 , －2），則 的坐標為【 <input type="text" id="q18">】象限。
+            </p>
+        </div>
+
+        <div>
+            <p>9.元元到市場買水果，已知 1 顆奇異果與 1 顆橘子共 33 元，元元共買了 3 顆奇異果與 5 顆橘子，結帳時店員將兩種價錢<br>
+                記反，使得元元比原先需付的金額少付了 6 元。則元元原先應付【 <input type="text" id="q19">】元。
+            </p>
+        </div>
+
+        <br>
+        <button type="button" onclick="showAnswers()">提交</button>
+        <script src="submitQuiz2.js"></script>
+    </form>
+    <div id="result" class="result"></div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇題與填充題</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .quiz-container {
+            margin-bottom: 20px;
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .answer {
+            margin-top: 5px;
+        }
+        .result {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h2>選擇題</h2>
+        
+        <div id="question1">
+            <p class="question">1. JavaScript 是一種什麼語言？</p>
+            <select id="answer1">
+                <option value="">選擇</option>
+                <option value="前端">前端</option>
+                <option value="後端">後端</option>
+                <option value="資料庫">資料庫</option>
+            </select>
+            <div class="answer" id="result1"></div>
+        </div>
+
+        <div id="question2">
+            <p class="question">2. HTML 是用來做什麼的？</p>
+            <select id="answer2">
+                <option value="">選擇</option>
+                <option value="排版">排版</option>
+                <option value="樣式">樣式</option>
+                <option value="互動">互動</option>
+            </select>
+            <div class="answer" id="result2"></div>
+        </div>
+
+        <div id="question3">
+            <p class="question">3. CSS 主要用來做什麼？</p>
+            <select id="answer3">
+                <option value="">選擇</option>
+                <option value="樣式">樣式</option>
+                <option value="數據處理">數據處理</option>
+                <option value="網頁邏輯">網頁邏輯</option>
+            </select>
+            <div class="answer" id="result3"></div>
+        </div>
+    </div>
+
+    <div class="quiz-container">
+        <h2>填充題</h2>
+
+        <div id="question4">
+            <p class="question">1. JavaScript 的創造者是 <input type="text" id="fillAnswer1">。</p>
+            <div class="answer" id="fillResult1"></div>
+        </div>
+
+        <div id="question5">
+            <p class="question">2. 網頁的樣式是用 <input type="text" id="fillAnswer2"> 來設計的。</p>
+            <div class="answer" id="fillResult2"></div>
+        </div>
+
+        <div id="question6">
+            <p class="question">3. <input type="text" id="fillAnswer3"> 用來設計網頁的結構。</p>
+            <div class="answer" id="fillResult3"></div>
+        </div>
+    </div>
+
+    <button onclick="checkAnswers()">檢查答案</button>
+
+    <div class="result" id="finalScore"></div>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;  // 初始化分數
+            let unanswered = false;  // 檢查是否有未作答的題目
+
+            // 檢查選擇題答案
+            const correctAnswers = {
+                q1: "前端",
+                q2: "排版",
+                q3: "樣式"
+            };
+
+            const userAnswer1 = document.getElementById('answer1').value;
+            const userAnswer2 = document.getElementById('answer2').value;
+            const userAnswer3 = document.getElementById('answer3').value;
+
+            // 檢查第一道選擇題
+            if (userAnswer1 === "") {
+                unanswered = true;
+                document.getElementById('result1').textContent = "請回答此題";
+                document.getElementById('answer1').focus();
+                return;
+            } else if (userAnswer1 === correctAnswers.q1) {
+                score++;
+                document.getElementById('result1').textContent = "正確";
+            } else {
+                document.getElementById('result1').textContent = "錯誤 (正確答案: " + correctAnswers.q1 + ")";
+            }
+
+            // 檢查第二道選擇題
+            if (userAnswer2 === "") {
+                unanswered = true;
+                document.getElementById('result2').textContent = "請回答此題";
+                document.getElementById('answer2').focus();
+                return;
+            } else if (userAnswer2 === correctAnswers.q2) {
+                score++;
+                document.getElementById('result2').textContent = "正確";
+            } else {
+                document.getElementById('result2').textContent = "錯誤 (正確答案: " + correctAnswers.q2 + ")";
+            }
+
+            // 檢查第三道選擇題
+            if (userAnswer3 === "") {
+                unanswered = true;
+                document.getElementById('result3').textContent = "請回答此題";
+                document.getElementById('answer3').focus();
+                return;
+            } else if (userAnswer3 === correctAnswers.q3) {
+                score++;
+                document.getElementById('result3').textContent = "正確";
+            } else {
+                document.getElementById('result3').textContent = "錯誤 (正確答案: " + correctAnswers.q3 + ")";
+            }
+
+            // 檢查填充題答案
+            const fillCorrectAnswers = {
+                fill1: "Brendan Eich",
+                fill2: "CSS",
+                fill3: "HTML"
+            };
+
+            const fillAnswer1 = document.getElementById('fillAnswer1').value.trim();
+            const fillAnswer2 = document.getElementById('fillAnswer2').value.trim();
+            const fillAnswer3 = document.getElementById('fillAnswer3').value.trim();
+
+            // 檢查第一道填充題
+            if (fillAnswer1 === "") {
+                unanswered = true;
+                document.getElementById('fillResult1').textContent = "請回答此題";
+                document.getElementById('fillAnswer1').focus();
+                return;
+            } else if (fillAnswer1 === fillCorrectAnswers.fill1) {
+                score++;
+                document.getElementById('fillResult1').textContent = "正確";
+            } else {
+                document.getElementById('fillResult1').textContent = "錯誤 (正確答案: " + fillCorrectAnswers.fill1 + ")";
+            }
+
+            // 檢查第二道填充題
+            if (fillAnswer2 === "") {
+                unanswered = true;
+                document.getElementById('fillResult2').textContent = "請回答此題";
+                document.getElementById('fillAnswer2').focus();
+                return;
+            } else if (fillAnswer2 === fillCorrectAnswers.fill2) {
+                score++;
+                document.getElementById('fillResult2').textContent = "正確";
+            } else {
+                document.getElementById('fillResult2').textContent = "錯誤 (正確答案: " + fillCorrectAnswers.fill2 + ")";
+            }
+
+            // 檢查第三道填充題
+            if (fillAnswer3 === "") {
+                unanswered = true;
+                document.getElementById('fillResult3').textContent = "請回答此題";
+                document.getElementById('fillAnswer3').focus();
+                return;
+            } else if (fillAnswer3 === fillCorrectAnswers.fill3) {
+                score++;
+                document.getElementById('fillResult3').textContent = "正確";
+            } else {
+                document.getElementById('fillResult3').textContent = "錯誤 (正確答案: " + fillCorrectAnswers.fill3 + ")";
+            }
+
+            // 顯示最終分數
+            if (!unanswered) {
+                document.getElementById('finalScore').textContent = "您的總分是: " + score + " / 6";
+            }
+        }
+    </script>
+
+</body>
+</html>
