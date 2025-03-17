@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>練習11</title>
+    </head>
+    <body>
+        <table border="1">
+            <tr>    <!--這是設定每一列要用的標籤-->
+                <th>星期一</th>
+                <th>星期二</th>
+                <th>星期三</th>
+                <th>星期四</th>
+                <th>星期五</th>
+            </tr>
+            <!--這是設定表格首列-->
+
+            <tr>
+                <td colspan="2">禱告</td>
+                <!--這是橫的合併幾個格子放入一個內容-->
+
+                <td>寫網頁設計筆記</td>
+                <td>設計網站</td>
+                <td>練習寫網頁</td>
+                <!--這是設定第二列事項、菜單，不會顯示粗體黑字-->
+
+            </tr>
+            <tr>
+                <td>設計卡片</td>
+                <td>出去走走</td>
+                <td>中友百貨看書</td>
+                <td>宣傳活動</td>
+                <td>整理房間</td>
+            </tr>
+        </table><br>
+
+        <table border="1">
+            <tr>
+                <th>國語</th>
+                <th>英語</th>
+                <th>數學</th>
+            </tr>
+            <tr>
+                <td>背影</td>
+                <td>The store</td>
+                <td rowspan="2">方程式</td>
+                <!--這是幾個格子做直的合併，再放入內容-->
+
+            </tr>
+            <tr>
+                <td>長城曲</td>
+                <td>nation</td>
+            </tr>
+        </table><br>
+
+        <form>      <!--這是把按鈕放在一起所設定的標籤-->
+            <button type="submit">提交</button>
+            <!--這是設定在資料填完後的送出按鈕-->
+
+            <button type="reset">重設</button>
+            <!--這是設定資料填錯時能重新打-->
+        </form>
+
+        <form>
+            <input type="email" pattern=".+@gmail.com" placeholder="例如sdsr@gmail.com" size="30">
+            <!--這是設定一個輸入信箱的框，裡面放入範例，還有限定只能輸入30個字母、符號-->
+
+            <input type="submit">
+        </form>
+        <br>
+        <form>
+            <input type="a1">
+            <!--這是設定一個輸入資料的框-->
+
+            <input type="submit">
+        </form>
+        <br>
+        <form>
+            <input type="a2">
+            <input type="sd">
+        </form>
+        <br>
+        <form>
+            <input type="number" min="0" max="10" step="2">
+            <!--這是設定一個有限範圍的數值之框，然後有上下箭頭，每案一次都會±2-->
+
+            <input type="submit">
+        </form>
+        <br>
+        <form>
+            <input type="color">
+            <!--這是設定讓使用者選顏色的框-->
+
+            <input type="submit">
+        </form>
+        <br>
+        <form>
+            <input type="datetime-local">
+            <!--這是設定讓使用者在框中選擇日期與時間-->
+
+            <input type="submit">
+        </form>
+    </body>
+</html>

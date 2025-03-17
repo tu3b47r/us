@@ -1,0 +1,12 @@
+@charset "UTF-8";
+.container{
+    display: flex;
+}
+.item{
+    background: #56b719;
+    padding: 5px;
+    margin: 5px;
+}
+div div:nth-child(1){
+    flex-basis: 150px;
+}

@@ -1,0 +1,30 @@
+@charset "UNF-8";
+.container1{
+    display: flex;
+    background: aquamarine;
+    height: 120px;
+}
+.item{
+    background:yellow;
+    padding: 12px;
+    margin: 7px;
+}
+div div:nth-child(1){      /*這是用來設定指定標籤裡面的第一個項目*/
+    align-self: stretch;
+    /*這是針對所指定的來設定拉伸之樣式*/
+
+}
+div div:nth-child(2){
+    align-self: flex-start;
+    /*這是針對所指定的來設定對齊前一個，然後放在最上方*/
+
+}
+div div:nth-child(3){
+    align-self: flex-end;
+}
+div div:nth-child(4){
+    align-self: center;
+}
+div div:nth-child(5){
+    align-self: baseline;
+}

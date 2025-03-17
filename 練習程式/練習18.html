@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>練習18</title>
+        <style>
+            img{
+                width: 40%;
+                /*這是針對此標籤設定圖片寬度比例*/
+
+                display: block;
+                margin: 10px auto;
+                /*這是針對此標籤設定圖片上方要留多少空間*/
+            }
+            li{
+                display: inline-block;
+                /*這是針對此標籤設定顯示設定項目的顯示類型樣式*/
+
+                list-style-type: none;
+                /*這是針對此標籤設定不要顯示項目符號之樣式*/
+
+                width: 100px;
+                background-color: cadetblue;
+                text-align: center;
+            }
+            li a{
+                text-decoration-line: none;
+                /*這是針對此標籤設定不要顯示底線的樣式*/
+
+                color: blueviolet;
+            }
+            h1{
+                text-align: center;
+            }
+            p{
+                background-color: lawngreen;
+            }
+            caption{
+                caption-side: bottom;
+                /*這是針對此標籤設定移至表格下方之樣式*/
+
+            }
+            th{
+                background-color: cadetblue;
+                padding: 7px;
+            }
+            td{
+                background-color: cornsilk;
+                padding: 7px;
+            }
+        </style>
+    </head>
+    <body style="background-image: url(鬼通.png);">
+    <!--這是直接在此設定背景的圖片樣式-->
+
+        <img src="rose.jpg">
+        <ul>
+            <li><a href="pro.html">產品介紹</a></li>
+            <li><a href="sev.html">服務項目</a></li>
+            <li><a href="company.html">關於公司</a></li>
+        </ul>
+        <h1>詩篇第35篇</h1>
+        <p style="margin: 1cm 0.7cm;"><sup>1</sup>(大衛的詩)耶和華啊，與我相爭的，
+        求你與他們相爭!與我相戰的，求你與他們相戰!<sup>2</sup>拿著大小的盾牌，起來幫助我。
+        <sup>3</sup>抽除槍來，擋住那追趕我的，求你對我的靈魂說:我是拯救你的。</p>
+        <p><sup>4</sup>願那尋索我命的，蒙羞受辱，願那謀害我的，退後羞愧。<sup>5</sup>願他
+        們像風前的糠，有耶和華的使者趕逐他們。<sup>6</sup>願他們的道路，又暗又滑，有耶和華
+        的使者追趕他們。</p>
+
+        <h1 style="background-color: beige; max-width: 300px;">羅馬書第四章</h1>
+        <!--這是直接在此設定顏色涵蓋最大之寬度的樣式，然後將文字放入-->
+
+        <p style="background-color: aqua;width: 450px; max-height: 120px;">        
+            <!--這是直接在此設定顏色涵蓋的寬度、最大的長度範圍之樣式-->
+        <sup>1</sup>如此說來，我們的祖宗亞伯拉罕，憑著肉體得了甚麼呢?<sup>2</sup>倘若亞伯拉罕是因行為稱義，
+        就有可誇的，只是在神面前並無可誇。<sup>3</sup>經上說甚麼呢?說:『亞伯拉罕信神，這就算為他的義。』<sup>4</sup>
+        做工的工價，不算恩典，乃是該得的，<sup>5</sup>唯有不作工的，只信稱最人為義的神，他的信就算為義。<sup>6</sup>
+        正如大衛稱納在行為以外，蒙神算為義的人是有福的。</p>
+
+        <p style="background-color: rgb(68, 122, 14); width: 450px; max-height: 90px; overflow: auto;">
+            <!--這是直接在此設定顏色涵蓋的長寬度範圍、隨意上下移動的樣式
+            overflow是用來設定在侷限的框內上下移動之樣式-->
+        <sup>7</sup>他說:『得赦免其過，遮蓋其罪的，這人是有福的。<sup>8</sup>主不算唯有罪的，這人是有福的。』<sup>9</sup>
+        如此看來，這福是單加給那受割禮的人嗎?不也是加給那未受割禮的人嗎?因我們所說，亞伯拉罕的信，就算為他的義，<sup>10</sup>
+        是怎麼算的呢?是在他受割禮的時候呢?是在他未受割禮的時候呢?不是在受割禮的時候，乃是在未受割禮的時候。</p>
+
+        <div style="border: solid 7px violet; width: 700px;
+        background-image: url(f.jpg); background-repeat: no-repeat;
+        background-position: right top;">
+        <!--這是直接在此把三種功能都設定在一個文字外框之樣式，還有設定把圖片當背景，並且只能
+        顯示一次之樣式，最後將圖片設置在框內右上角
+        background-position: right top;  這是用來設定將圖片設置在右上角-->
+        <pre>
+            信是未曾看見 依然仰望十架
+            信是完全交托 深知主已掌權
+
+            我靠著那加添給我力量的 凡事都能做
+            或風浪或低谷  主平安在我心
+
+            我靠著那加添給我力量的 凡事都能做
+            行在主的旨意  我凡事都能做
+        </pre>
+        </div>
+        <div style="border: solid 7px sandybrown; background-image: url(f2.gif);
+        background-repeat: no-repeat; background-size: auto;">
+        <h1>有一天</h1>
+        <h1>再一次</h1>
+        </div>
+
+        <table>
+            <caption>著名的火影忍者人物</caption>
+            <!--這是在表格上設定一的主題-->
+
+            <tr>
+                <th>角色人物</th>
+                <th>強大忍術</th>
+            </tr>
+            <tr>
+                <td>鳴人</td>
+                <td>風盾-螺旋手裏劍</td>
+            </tr>
+            <tr>
+                <td>宇智波佐助</td>
+                <td>炎盾-加具土命</td>
+            </tr>
+        </table>
+    </body>
+</html>

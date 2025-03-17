@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta charset="viewport" content="width=device-width,initial-scale=1">
+            <script>
+                function CtooF(d1){
+                    return d2 = d1 * 1.8 + 32;
+                }
+
+                var t4 = prompt("請輸入攝氏溫度：","");
+                var result = CtooF(t4);
+                alert("攝氏溫度" + t4 + "度轉為華氏" + result + "度");
+
+                var n3 = prompt("請輸入一個數字:","");
+                if(n3 >= 70) alert("通過考驗");
+
+                function shoM5(){
+                    var us1 = '??UI嗨';
+                    window.alert(us1);
+                }
+
+                var us1 = '!?!HO維';
+                shoM5();
+                window.alert(us1);
+                /*這是設定會將呼叫的內容換成別的內容*/
+
+                var n5 = prompt("請輸入一個數字:","");
+                switch(n5){
+                    case "1":
+                    /*這適當輸入數值為1時，會執行下一行*/
+
+                        alert("天父是唯一的真神");
+                        break;
+                        /*這是防止繼續執行下去，執行到上面那一行後就跳開*/
+
+                    case "3":
+                        alert("聖父、聖靈、聖子是三位一體的神");
+                        break;
+                    case "6":
+                        alert("這是魔鬼用的數字");
+                        break;
+                    case "7":
+                        alert("這是上帝最喜愛的數字");
+                        break;
+                    case "10":
+                        alert("這是指完全的意思");
+                        break;
+                    default:
+                        alert("沒有其他意思");
+                        break;
+                }
+                /*這是設定當變數為甚麼數值時，會對應到拿個數值來
+                將指定文字顯示在網頁中的小對話框之條件式程式語法*/
+
+                var s4 = prompt('請輸入一個數字:','');
+                while(s4 != 77){
+                    if(s4 > 77){
+                        alert("太大了! 大到看不見了!");
+                        s4 = prompt('請重新輸入數字:','');
+                    }
+                    else if(s4 < 77){
+                        alert("太小了! 重新輸入!");
+                        s4 = prompt('請重新輸入數字:','');
+                    }
+                }
+                /*這是用JavaScript寫一個一直輸入數字，直到數字=77時
+                才會結束之條件程式語法*/
+
+                alert("炸彈爆炸!!!!!");
+
+                let coloes = ['紅色','黑色','白色','黃色','藍色','綠色','橘色'];
+                
+                document.write('<table border="1">');
+                for(let r1 = 0;r1 < coloes.length ; r1++){
+                    document.write('<tr><td>顏色' + (r1 + 1) + '<td>');
+                    /*這是用JavaScript寫一個陣列讀入變成表格形式顯示*/
+
+                    document.write('<td>' + coloes[r1] + '<td><tr>');
+                }
+                document.write('</table>');
+                /*這是用JavaScript寫一個設定把表格標籤放到讀入之程式語法*/
+            </script>
+        <title>練習27</title>
+    </head>
+    <body>
+        <h1>敏謝惠顧？？|</h1>
+        <script>
+            document.write("您太好了");
+        </script>
+        <noscript>無法使用JavaScript!</noscript>
+        <br>
+
+        <button onclick="javascript:window.alert('Hello，台灣好！');">
+        顯示訊息</button>
+        <!--這是設定一個顯示訊息的按鈕，當按下按鈕時會在網頁中顯示一個小的
+        對話框。
+        <button onclick="">文字</button>  這是設定一個按下時的按鈕-->
+
+        <script src="two_seven.js"></script>
+
+
+    </body>
+</html>

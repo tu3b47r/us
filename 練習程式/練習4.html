@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="refresh" content="5; url=https://tw.yahoo.com">
+        <!--這是設定時間過了5秒後，跳到另一個網站-->
+        
+        <link rel="stylesheet" href="four.css" type="text/css">
+        <title>練習4</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                width: 100%;
+                min-width: 600px;
+                max-width: 960px;
+                margin: auto;         /*這是把網頁所有版面置中*/
+            }       /*這是把整個網頁設定版面大小*/
+            header{
+                width: 100%;
+                background: #b3a7a7;
+            }    /*這是在有限的版面中對標頭做版面設定*/
+            nav{
+                width: 100%;
+                color: #4bc73a;
+                background: #4c1fec;
+            }    /*這是在有限的版面中對導覽區做版面設定*/
+            main{
+                width: 70%;
+                height: 500px;
+                background: #f77010;
+                float: left;
+                /*這是在有限的版面中對內容區做版面設定*/
+            }
+            aside{
+                width: 30%;
+                height: 500px;
+                background: #ef4497;
+                float: right;
+                /*這是在有限的版面中做側邊選項攔版面設定*/
+            }
+            footer{
+                width: 100%;
+                background: #b3a7a7;
+                clear: both;
+                /*這是在有限的版面中尾端做版面設定*/
+            }
+            table{
+                border: 2px solid #f77010;
+            }
+            th,td{
+                border: 5px solid skyblue;
+                empty-cells: show;
+            }
+            .box{
+                width: 70px;
+                height: 70px;
+                background-color: #e169b2;
+                border-radius: 50%;
+                animation: move 3s ease-in-out infinite;
+                /*這是針對某個class設定動畫的所有功能之樣式*/
+            }
+            @keyframes move{
+                0%,100%{
+                    transform: translateX(0);
+                }
+                50%{
+                    transform: translateX(400px);
+                    /*這是針對指定的東西設定移動的樣式*/
+
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header><h1>頁首</h1></header>
+        <nav><h1>導覽列</h1></nav>
+        <main><h1>主要內容</h1></main>
+        <aside><h1>側邊攔</h1></aside>
+        <footer><h1>頁尾</h1></footer>
+        此網站將於5秒後轉換成yahoo網站
+
+        <table>
+            <tr>
+                <th>詩歌名稱</th>
+                <th>樂團</th>
+            </tr>
+            <tr>
+                <td>能不能</td>
+                <td>讚美之權</td>
+            </tr>
+            <tr>
+                <td>安靜</td>
+                <td>約書亞</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <div class="container">
+            <div class="item">湯<br>麵</div>
+            <!--這是設定一個class所指定id，裡面能換行寫文字之樣式-->
+
+            <div class="item">燴飯</div>
+            <div class="item">小菜</div>
+        </div>
+
+        <div class="box"></div>
+    </body>
+</html>

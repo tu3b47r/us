@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>練習14</title>
+        <style>
+            [class]{
+                color: #71ed0c;
+            }
+            /*這是針對某個定義去做樣式設定*/
+            
+            #j1{        /*這是針對id指定的名稱作樣式設定*/
+                font-size: 20px;
+                /*這是做某個東西的大小設定*/
+
+                color: #75dded;
+            }
+            #j2{
+                font-size: 20px;
+                color: #dff84f;
+            }
+            p::first-line{      /*這是指定在文章第一行做樣式設定*/
+                color: #e46565;
+            }
+            p::after{   /*這是指定在最後一段作樣式設定*/
+                content: "(箴言23:4)";
+                /*這是在指定的旁邊加文字*/
+
+                color: #2ceb5c;
+                /*這是對加上的文字做顏色設定*/
+            }
+            a:link{     /*這是對還沒被點選的連結做樣式設定*/
+                color: fuchsia;
+            }
+            a:visited{      /*這是對點選過的連結做樣式設定*/
+                color: aqua;
+            }
+            h1{         /*這是在滑鼠沒有過去前，對這個標籤做樣式設定*/
+                background: chocolate;
+                /*這是做整條顏色設定*/
+
+            }
+            h1:hover{       /*這是在滑鼠過去後，對這個標籤做樣式設定*/
+                background: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li class="Meat-dumpling">肉粽</li>
+            <li class="dumpling">水餃</li>
+            <li class="rice-cake">米糕</li>
+            <li class="Rice-noodle-soup">米粉湯</li>
+            <li class="Gongwan-soup">貢丸湯</li>
+        </ul>
+        <table border="1">
+            <tr>
+                <th>人物素描</th>
+                <th>角色</th>
+                <th>介紹</th>
+            </tr>
+            <tr>
+                <td><img src="piece1.jpg" width="100"></td>
+                <!--這是設定在表格裡面還能放圖片-->
+
+                <td>喬巴</td>
+                <td>身分船醫，夢想成為一個能治百病的神醫</td>
+            </tr>
+            <tr>
+                <td><img src="piece2.jpg" width="100"></td>
+                <td>索隆</td>
+                <td>主角魯夫的夥伴，夢想成為世界第一的劍士。</td>
+            </tr>
+            <tr>
+                <td><img src="piece3.jpg" width="100"></td>
+                <td>佛朗基</td>
+                <td>傳說中的船匠－湯姆的弟子，打造了千陽號。</td>
+            </tr>
+        </table>
+        <h2>文具使用意見調查表</h2>
+        <form>
+            <p>姓&nbsp;&nbsp;&nbsp;名
+            <input type="text"  name="userName" size="10"></p>
+
+            <p>E-mail:<input type="text" name="userMail" size="25" value="yuii7@gmail.com"></p>
+            <p>年&nbsp;&nbsp;&nbsp;齡
+            <input type="radio" name="userAge" value="a1">未滿20歲
+            <input type="radio" name="userAge" value="a2">20~29歲
+            <input type="radio" name="userAge" value="a3">30~39歲
+            <input type="radio" name="userAge" value="a4">40歲以上
+            <p>您常使用哪些文具?
+            <input type="checkbox" name="Stationery" value="b1">便條紙
+            <input type="checkbox" name="Stationery" value="b2">空白筆記本
+            <input type="checkbox" name="Stationery" value="b3" checked>書籤
+            <input type="checkbox" name="Stationery" value="b4">計算紙
+            <input type="checkbox" name="Stationery" value="b5">線條筆記本</p>
+            <p>您常去哪些文具店購買?(可複選)
+               <select name="n9" size="5 multiple">
+                    <option value="墊腳石">墊腳石</option>
+                    <option value="光南">光南</option>
+                    <option value="101文具天堂">101文具天堂</option>
+                    <option value="諾貝爾書店">諾貝爾書店</option>
+                    <option value="九乘九文具店">九乘九文具店</option>
+                    <option value="金玉堂文具店">金玉堂文具店</option>
+                    <option value="久大文具連鎖店">久大文具連鎖店</option>               
+            </select> </p>
+            <p>您對於文具使用有什麼需求?<br>
+            <textarea name="userTrouble" cols="50" rows="2">例如:什麼款式，顏色
+            </textarea></p>
+            <input type="submit" value="提交">
+            <input type="reset" value="重設">
+            <button id="j1">按鈕A</button>
+            <!--這是作按鈕設定，然後有指定id-->
+
+            <button id="j2">按鈕B</button>
+        </form>
+        <p>我雖然行過死陰的幽谷，<br>
+           也不怕遭害，<br>
+           因為你與我同在；<br>
+           你的杖，你的竿，都安慰我。</p>
+
+        <li><a href="國中英文隨機測驗.html">國中英文隨機測驗</a></li>
+        <!--這是設定一個連結網站，並設定連結名稱-->    
+
+        <li><a href="國中數學隨機測驗.html">國中數學隨機測驗</a></li>
+        <li><a href="國中理化隨機測驗.html">國中理化隨機測驗</a></li>
+        <li><a href="國中生物隨機測驗.html">國中生物隨機測驗</a></li>
+
+        <h1>恩典</h1>
+        <h1>平安</h1>
+        <h1>智慧</h1>
+
+        <h1 style="color: #b4d896;">喜樂</h1>
+        <!--這是直接在標籤裡面做各種顏色設定-->
+
+        <h1 style="color: hsl(151, 67%, 85%);">信心</h1>
+        <h1 style="color: rgb(251, 19, 19);">寶血</h1>
+        <h1 style="color: rgba(241, 220, 192, 0.719);">軍裝</h1>
+        <h1 style="color: hsla(210, 59%, 20%, 0.849);">剛強</h1>
+    </body>
+</html>

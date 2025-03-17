@@ -1,0 +1,29 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    min-width: 600px;
+    max-width: 950px;
+    background: #a6c12b;
+    margin: 0 auto;
+}
+header{
+    width: 100%;
+    background: #3b5c12;
+}
+footer{
+    width: 100%;
+    background: #3bd433;
+}
+.flexcontainer{
+    display: flex;
+    justify-content: space-between;
+}
+.flexitem{
+    width: 32%;
+    height: 200px;
+    background: #ca14b5;
+}

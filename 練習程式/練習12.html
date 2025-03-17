@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>練習12</title>
+        <style>
+            table{
+                border: 2px hotpink solid;
+                border-collapse: collapse;
+                /*這是設定所有的相鄰邊框都合併*/
+            }
+            thead,tfoot{     
+                background-color: aqua;
+            }
+            tbody{
+                background-color: bisque;
+            }
+            th,td{          /*這是對某幾個標籤作樣是設定*/
+                border: 1px hotpink solid;
+                /*這是設定線條顏色、線條粗細*/
+
+                padding: 5px;
+                /*這是設定文字與邊框距離*/
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <input type="range" min="0" max="60" step="1">
+            <!--這是設定一個有限範圍數值的滑動點，每往右滑一點就+1-->
+
+            <input type="submit">
+        </form>
+        <br>
+        <table>
+            <thead>     <!--這是表格開投首列-->
+                <tr>
+                    <th>稱號</th>
+                    <th>人物</th>
+                    <th>擅長忍術</th>
+                </tr>
+            </thead>
+            <tbody>     <!--這是當要填很多表格項目時，適合用此方法-->
+                <tr>
+                    <td>第一代火影</td>
+                    <td>千手住間</td>
+                    <td>樹葉降彈</td>
+                </tr>
+                <tr>
+                    <td>第二代火影</td>
+                    <td>千手扉間</td>
+                    <td>水龍彈之術</td>
+                </tr>
+                <tr>
+                    <td>第三代火影</td>
+                    <td>猿飛蒜山</td>
+                    <td>土遁-土流壁</td>
+                </tr>
+                <tr>
+                    <td>第四代火影</td>
+                    <td>波風湊</td>
+                    <td>飛雷神之術</td>
+                </tr>
+                <tr>
+                    <td>第五代火影</td>
+                    <td>剛手</td>
+                    <td>痛天腳</td>
+                </tr>
+                <tr>
+                    <td>第六代火影</td>
+                    <td>旗木卡卡西</td>
+                    <td>雷遁-雷切</td>
+                </tr>
+                <tr>
+                    <td>第七代火影</td>
+                    <td>漩渦鳴人</td>
+                    <td>螺旋丸</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <td colspan="3">資料來源:維基百科</td>
+            </tfoot>
+        </table>
+        <br>
+        <form>
+            <input type="tel" pattern="[0~9]{4}-[0~9]{6}" placeholder="例如0945-257801">
+            <!--這是設定一個輸入手機號碼的框，還規定要輸入格式和放入範例-->
+
+            <input type="submit">
+        </form>
+        <br>
+        <form>
+            <input type="radio" name="gender" id="man" value="男">
+            <label for="man">男</label>
+            <!--這是設定一個單選按鈕，然後用id辨識和顯示選項文字-->
+
+            <input type="radio" name="gender" id="woman" value="女">
+            <label for="woman">女</label>
+        </form>
+
+        <form>
+            <label for="TVshow">選擇要觀賞的娛樂節目</label>
+            <!--這是設定一個組別選單-->
+
+                <select id="TVshow">
+                <!--這是設定下拉式選單-->    
+
+                    <optgroup label="國內娛樂頻道">
+                    <!--這是在下拉式選單中分類組選單-->
+
+                        <option>綜藝大樂門</option>
+                        <option>天才衝衝衝</option>
+                    </optgroup>
+                    <optgroup label="國外娛樂頻道">
+                        <option>全員逃走中</option>
+                        <!--這是設定下拉式選單的選項-->
+
+                        <option>摔角比賽</option>
+                        <option>大胃王比賽</option>
+                    </optgroup>
+                </select>
+        </form>
+        <br>
+        <form>
+            輸入密碼:<input type="password" name="UserPWD" size="10">
+            <!--這是設定一個輸入密碼的框，限定只能輸入10個英文、符號-->
+
+            <input type="submit" value="提交">
+            <input type="reset" value="重設">
+        </form>
+    </body>
+</html>

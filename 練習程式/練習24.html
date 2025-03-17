@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <link rel="stylesheet" href="two_four.css">
+
+        <title>練習24</title>
+    </head>
+    <body>
+        <nav>
+            <div>設計室</div>
+            <input id="w1" type="checkbox">
+            <label class='hamburger-icon' for="w1">
+            <!--這是將項目設定成折疊式顯示，或是可展開式顯示之樣式-->
+
+                <div class='bar'></div>
+            </label>
+            <ul class="w2">
+                <li>關於公司</li>
+                <li>商品</li>
+                <li>登入</li>
+            </ul>
+        </nav>
+
+        <script>
+            var sum=(a,b)=>{
+            /*這是第二種方式設定一個有放函式之變數*/
+
+                return a*b;
+            };
+
+            window.alert('5與7相乘為:'+sum(5,7));
+
+            const PI=3.14159;
+            /*這是設定一個常數之變數*/
+
+            var radius = 7;
+            var area = PI * radius * radius;
+            /*這是設定一個計算面積之變數*/
+
+            window.alert(area);
+            /*這是設定將計算面積結果顯示在網頁中一
+            個對話框*/
+
+            for(var i=1;i <= 17 ; i++){
+                if(i < 11) continue
+                /*這是設定一個當變數小於11時，就跳回上面繼續，
+                到變數>=11時才會進行下一步之條件式*/
+
+                alert(i);
+            }
+            do{
+                var n1 = prompt('請輸入1~100請輸入1~100的數字','');
+                if(n1 > 37){
+                    alert("太大了!請重新輸入!");
+                }else if(n1 < 37){
+                    alert("太小了!請重新輸入!");
+                }
+            }while(n1 !=37)
+            /*這是設定一個當變數不等於37時，會繼續執行，直到
+            等於37後才進行到下一步之條件式*/
+
+            alert("答對了!");
+           
+            var t1=0;
+            for(let u = 3;u <= 12;u++){
+                t1 = t1 + u;
+            }
+            /*這是設定一個for迴圈計算3加到12之總和*/
+            
+            alert(t1);
+
+            var o1 = {card: 15,card_red:20,card_blur:25};
+            /*這是設定一個存入資料的變數*/
+
+            for(let p1 in o1){
+                window.alert(p1 + '=' +o1[p1]);
+                /*這是設定將每一個對應屬性名稱和資料顯示在
+                網頁中一個對話框*/
+
+            }
+            /*這是設定一個for迴圈照順序把第一個
+            物件到最後一個物件顯示出來*/
+
+            var arr1 = [11,22,33];
+            /*這是設定一個存入資料的陣列變數*/
+
+            for(var u3 of arr1){
+                window.alert(u3)
+                /*這是設定將陣列中每一個數值顯示在網頁
+                中一個對話框*/
+
+            }
+            /*這是設定一個for迴圈照順序將陣列中的
+            數值顯示出來*/
+
+        </script>
+    </body>
+</html>

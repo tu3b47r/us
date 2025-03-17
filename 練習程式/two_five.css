@@ -1,0 +1,112 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    max-width: 890px;
+    margin: 0 auto;
+}
+
+header,nav,main,footer{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header{
+    color: #eb8a8a;
+    background: #3f602e;
+}
+
+nav > ul{
+    display: flex;
+    margin-top: 25px;
+}
+
+nav > ul > li{
+    width: 70px;
+    margin-right: 8px;
+    padding: 11px;
+    list-style: none;
+    border: 1px solid darkorange;
+    border-radius: 2px;
+}
+
+hr{
+    border: 2px solid aquamarine;
+    margin: 55px 0 25px;
+    /*這是直接針對此標籤設定所有邊框之間的邊距樣式
+    margin: 55px 0 25px; 這是設定跟上邊框的邊距
+    為55px，左右邊框的邊距為0，下邊框的邊距為25px
+    之樣式*/
+
+}
+
+t1{
+    margin: 9px;
+    padding: 9px;
+}
+t2{
+    text-align: center;
+    margin: 55px 0 25px;
+}
+
+.grid1{
+    display: grid;
+    /*這是直接針對此class設定行和列的元素排列方式之樣式
+    display: grid; 設定每行和每列的排列方式為網格之樣式*/
+
+    gap: 22px;
+    /*這是針對此class裡面設定每個元素的間距之樣式*/
+
+    grid-template-columns: 2fr;
+    /*這是直接針對此class設定網格忠列的寬度之樣式
+    grid-template-columns: 2fr; 這是設定網格中
+    一列的可用空間有兩個之樣式*/
+    
+}
+
+.img-work{
+    max-width: 100%;
+    height: auto;
+    /*這是直接針對此class設定讓元素自動調整高度*/
+
+}
+.a-datail{
+    text-decoration: none;
+    color: #d2855e;
+    font-family: bold;
+}
+.a-bout1{
+    text-decoration: none;
+    /*這是直接針對此class設定除掉文字其他額外裝飾之樣式
+    text-decoration: none; 這通常是設定除掉文字的底線
+    之樣式*/
+
+    color: #000;
+    padding: 17px 0;
+}
+.a-back{
+    float: right;
+    text-decoration: none;
+    color: #d2855e;
+    font-family: "Arial";
+    /*這是直接針對此class設定文字的字體之樣式
+    font-family: "Arial"; 這是設定文字的字體
+    為無襯線字體之樣式*/
+    
+}
+
+@media screen and(min-width:501px){
+    .grid1{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and(min-width:769px){
+    .grid1{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

@@ -1,0 +1,46 @@
+.container{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
+h2{
+    margin-bottom: 15px;
+    /*這是針對此標籤設定底部間距*/
+
+}
+.custom-form{
+    display: flex;
+    flex-direction: column;
+    /*這是針對此class設定項目由上而下排列*/
+
+}
+label{
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+input[type="text"],input[type="email"],textarea{
+    padding: 10px;
+    margin-bottom: 25px;
+    bottom: 3px solid #f512a4;
+    border-radius: 7px;
+}
+
+button[type="submit"]{
+    padding: 13px;
+    background-color: aquamarine;
+    color: #cfea37;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    /*這是針對此標籤設定滑鼠到某個地方後，變成手形之樣式*/
+
+    font-weight: bold;
+    /*這是針對此標籤設定文字的粗細之樣式*/
+
+    transform: background-color 150ms ease;
+}
+
+button[type="submit"]:hover{
+    background-color: burlywood;
+}
