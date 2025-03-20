@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>練習33</title>
+        <style>
+            .bx1{
+                width: 70px;
+                height: 70px;
+                background-color: teal;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>生日卡</li>
+            <li>祝福卡</li>
+            <li>節日卡</li>
+            <li>經文卡</li>
+        </ul>
+        <script src="three_three.js"></script>
+
+        <button type="button" onclick="window.alert('嗨! 哈哈哈哈哈  我叫哈哈');">
+        顯示訊息</button>
+
+        <button type="button" onclick="shado()">
+        訊息</button><br>
+        <script src="three_three1.js"></script>
+
+        <button type="button" id="bt3">訊息1
+        </button><br>
+        <script src="three_three2.js"></script>
+
+        <button type="button" id="bt4">訊息2
+        </button>
+        <script src="three_three3.js"></script>
+
+        <button type="button" id="bt5">訊息3
+        </button><br>
+        <script src="three_three4.js"></script>
+
+        <button type="button" id="bt6">訊息4
+        </button><br>
+        <script src="three_three5.js"></script>
+
+        <div class="bx1" onmouseover="changco1(this)" onmouseout="changco1(this)"></div>
+        <script>
+            function changco1(t1){
+                if(t1.style.backgroundColor === 'pink'){
+                    t1.style.backgroundColor = 'teal';
+                }
+                else{
+                    t1.style.backgroundColor = 'pink';
+                }
+            }
+        </script>
+        <form>
+            <label for="nm4">手機號碼:</label>
+            <input type="text" id="nm4" size="11"><br>
+            <span id="mg5"></span><br>
+            <input type="submit">
+        </form>
+        <script src="three_three6.js"></script>
+
+        <form>
+            <label for="ach">請輸入一個字元：</label>
+            <input type="text" id="ach" size="7"><br>
+            <span id="mg6"></span><br>
+        </form>
+        <script src="three_three7.js"></script>
+
+        進入網頁的時間：<span id="onlitime"></span>
+        <script src="three_three8.js"></script>
+
+        <div id="reg1" style="position:absolute; top:300px; 
+        left:300px; width:150px; height:400px; 
+        border:3px solid blue;"></div>
+        <script src="three_three9.js"></script>
+
+        <img id="tu" src="Javascript證照.jpg" width="350px">
+        <script src="three_three10.js"></script>
+
+        <button type="button" id="bt7">訊息5
+        </button><br>
+        <script src="three_three11.js"></script>
+
+        <button type="button" id="bt8">訊息6
+        </button>
+        <script src="three_three12.js"></script>
+
+        <form id="myf1">
+            <input type="checkbox" id="ag2">同意<br>
+            <span id="mg7"></span><br>
+            <input type="submit">
+        </form>
+        <script src="three_three13.js"></script>
+    </body>
+</html>
