@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>練習47</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <style>
+            .bl1{
+                color: chartreuse;
+            }
+            .un2{
+                text-decoration: underline;
+            }
+            .hei1{
+                background: burlywood;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <table class="table">
+                <tr class="table-light">
+                <!--這是用Bootstrap的框架方式，設定表格中這一行
+                的背景顏色為淺灰色-->
+
+                    <td>練習16</td>
+                </tr>
+                <tr class="table-dark">
+                <!--這是用Bootstrap的框架方式，設定表格中這一行
+                的背景顏色為黑綠色-->
+
+                    <td>練習17</td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <p class="text-uppercase">huuu Tyuui fance</p>
+            <!--這是用Bootstrap的框架方式，設定將所有字串變成大寫-->
+
+            <p class="text-lowercase">happy Uno winder</p>
+            <!--這是用Bootstrap的框架方式，設定將逤有字串變成小寫-->
+
+            <p class="text-capitalize">F actor Uyio yy</p>
+            <!--這是用Bootstrap的框架方式，設定將句子中每個單字的開頭
+            字母變成大寫-->
+
+        </div>
+
+        <ul class="la-2">
+            <li class="it-11">抑制</li>
+            <li class="it-12">醫治</li>
+            <ul class="la-4">
+                <li class="it-I">心靈</li>
+                <li class="it-II">身體</li>
+            </ul>
+            <li class="it-13">UUI</li>
+        </ul>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script>
+            $('li.it-I').closest('ul').css('color','yellow');
+            /*這是用jQuery寫法針對此class內項目設定css的文字顏色為黃色
+            $('li.it-I').closest('ul') 這是用jQuery設定指定某class內的
+            項目，並確認ul有沒有在，如果沒有的話，就返回空集合*/
+
+        </script>
+
+        <div class="container">
+            <p class="text-warning-emphasis">UI</p>
+            <!--這是設定成Bootstrap框架中的文字顏色為加深厚的黃色-->
+
+            <p class="text-info">UX</p>
+            <!--這是設定成Bootstrap框架中的文字顏色為藍綠色-->
+
+            <p class="text-info-emphasis">全U</p>
+            <!--這是設定成Bootstrap框架中的文字顏色為加深後的藍綠色-->
+
+        </div>
+        
+        <h1 class="bl1 un2">箴言</h1>
+        <h1 class="bl1 un2">啟示錄</h1>
+        <h1 class="bl1 un2">加拉太書</h1>
+        <h1 class="bl1 un2">羅馬書</h1>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script>
+            $('h1:even').removeClass('un2').addClass('hei1');
+            /*這是用jQuery寫法針對此標籤的偶數行設定移除un2之樣
+            式、加添hei1之樣式
+            $('h1:even')  這是用jQuery針對此標籤的偶數行
+            removeClass('un2') 這是用jQuery寫法設定移除某class樣式
+            addClass('hei1')  這是用jQuery寫法設定加添某class樣式*/
+
+        </script>
+    </body>
+</html>

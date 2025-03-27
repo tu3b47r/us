@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>練習46</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <p><a href="" class="link-underline link-underline-opacity-25">奉獻</a></p>
+            <p><a href="" class="link-underline link-underline-opacity-0 link-offset-3-hover
+                link-underline-opacity-50-hover">問安</a></p>
+            <!--這是用Bootstrap的框架方式，設定一個連結，然後再設定連結的透明度為0，當滑鼠停留在此連
+            結時，連結內的文字下的線條透明度為50、文字與下面的線條之偏移間距為3rem
+            link-offset-3-hover 這是屬於Bootstrap的框架中，設定當滑鼠停留在此連結時，文字與下方的線條
+            之偏移間距為3rem
+            link-underline-opacity-50 這是屬於Bootstrap的框架中，設定當滑鼠停留在此連結時，文字下方的
+            線條透明度為50-->
+
+        </div>
+
+        <div class="container">
+            <p class="fst-normal"></p>
+        </div>
+
+        <div>
+            <table class="table table-hover">
+            <!--這是用Bootstrap的框架方式，設定當滑鼠停留在每行時
+            ，背景顏色會變成淺灰色
+            table-hover 這是屬於Bootstrap的框架中，設定當滑鼠停留
+            在每行時，背景顏色會變成淺灰色-->
+
+                    <tr>
+                        <th>檔案名稱</th>
+                        <th>功用</th>
+                    </tr>
+                <tbody class="table-group-divider">
+                    <tr>
+                        <td>練習7</td>
+                        <td>各種文字顯示、排版</td>
+                    </tr>
+                    <tr>
+                        <td>練習8</td>
+                        <td>影片與音樂播放</td>
+                    </tr>
+                    <tr>
+                        <td>練習9</td>
+                        <td>圖片調整、整齊排版</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container">
+            <p class="text-danger">自由</p>
+            <!--這是設定成Bootstrap框架中的文字顏色為紅色-->
+
+            <p class="text-danger-emphasis">話語能力</p>
+            <!--這是設定成Bootstrap框架中的文字顏色為加深後之紅色-->
+
+            <p class="text-warning">信實</p>
+            <!--這是設定成Bootstrap框架中的文字顏色為黃色-->
+
+        </div>
+
+        <div>箴言第四章
+            <img src="鳴人.png" width="45%" class="align-middle p-1">第2節
+        </div>
+
+        <div>箴言第四章
+            <img src="鳴人.png" width="45%" class="align-bottom p-1">第7節
+        </div>
+
+        <p>詩篇第35篇</p>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script>
+            $('p').append('<b><i>????太棒了，you win</i></b>');
+            /*這是用jQurey設定針對此標籤添加此段文字，此段文字有設定文字的粗
+            體、斜體字*/
+
+        </script>
+
+        <ul class="level-1">
+            <li class="item-1">字串</li>
+            <li class="item-2">STRIng</li>
+            <ul class="level-2">
+                <li class="item-I">數學</li>
+                <li class="item-II">Factioo</li>
+            </ul>
+            <li class="item-3">句子</li>
+        </ul>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script>
+            $('ul.level-2').children().css('color','green');
+            /*這是用jQuery設定針對此標籤的class內項目設定css的文字顏色為綠色
+            $('ul.level-2').children 這是用jQuery設定指定某class內的項目*/
+             
+        </script>
+    </body>
+</html>
