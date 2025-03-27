@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>練習51</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
+    </head>
+    <body>
+        <div class="container">
+            <div class="alert alert-danger" role="alert">
+            <!--這是用Bootstrap的框架方式，設定一個背景為紅色的警告框
+            alert-danger 這是屬於Bootstrap的框架中，設定警告框的背景為紅色-->
+
+                <a href="" class="alert-link"><strong></strong></a>
+                <!--這是屬於Bootstrap的框架中，設定一個有聯結的警告框-->
+
+            </div>
+            <div class="alert alert-success alert-dismissible" role="alert">
+            <!--這是用Bootstrap的框架方式，設定一個背景為綠色的警告框，此警告框也可以關閉
+            alert-success 這是屬於Bootstrap的框架中，設定警告框的背景為綠色
+            alert-dismissible 這是屬於Bootstrap的框架中，設定此警告框是可關閉-->
+
+                <strong></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <!--這是用Bootstrap的框架方式，設定一個關閉按鈕(通常是一個X)，還提醒Javasciprt
+                可以關閉
+                btn-close 這是屬於Bootstrap的框架中，設定一個關閉按鈕(通常是一個X)
+                data-bs-dismiss="alert" 這是屬於的Bootstrap的框架中，設定當觸發這
+                個按鈕時，就會把警告框關閉-->
+
+            </div>
+        </div>
+
+        <div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn-warning"></button>
+                <button type="button" class="btn-warning"></button>
+                <button type="button" class="btn-warning"></button>
+            </div>
+            <div class="btn-group btn-group-vertical">
+                <button type="button" class="btn-info"></button>
+                <button type="button" class="btn-info"></button>
+                <button type="button" class="btn-info"></button>
+            </div>
+        </div> 
+    </body>
+</html>
