@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>練習53</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+        <div>
+            <button type="button" class="btn-close"></button>
+        </div>
+        
+        <div>
+            <p><button class="btn btn-dark" type="button" data-bs-toggle="collapse"
+            data-bs-target="#poem">利未記3:17</button></p>
+            <div class="collapse" id="poem">
+                <div class="card card-body">
+                    在你們一切的住處，脂油和血都不可吃；這要成為你們世世代代永遠的定例。
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-danger">最新商品</button>
+                <button type="button" class="btn btn-danger">二手用品</button>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-danger dropdown-toggle"
+                    data-bs-toggle="dropdown">自創商品</button>
+                    <!--這是用Bootstrap的框架方式，設定一個背景為紅色、有下拉式展開
+                    箭頭的按鈕，當按下此按鈕時，就會顯示或隱藏下拉式選單
+                    dropdown-toggle 這是屬於Bootstrap的框架中，設定一個有下拉式展開
+                    箭頭的按鈕
+                    data-bs-toggle="dropdown" 這是屬於Bootstrap的框架中，當按下此按
+                    鈕時，就會顯示或隱藏下拉式選單-->
+
+                    <ul class="dropdown-menu">
+                    <!--這是設定成Bootstrap框架中的隱藏式下拉式選單-->
+
+                        <li><a class="dropdown-item" href="">書籤</a></li>
+                        <!--這是設定成Bootstrap框架中的隱藏式下拉式選單之一個項目連結-->
+                        
+                        <li><a class="dropdown-item" href="">筆記本</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <ul class="nav nav-tabs" id="Mytab">
+            <!--這是用Bootstrap的框架方式，設定一組導航連結和指定id用來辨識，然後
+            水平排列，其中一個導航項目為選中
+            nav-tabs 這是屬於Bootstrap的框架中，將此組導航連結要水平排列，且有一個項目
+            為選中狀態-->
+                <li class="nav-item">
+                <!--這是設定成Bootstrap框架中的導航欄位之項目-->
+
+                    <a class="nav-link" data-bs-toggle="tab" href="#t2">創世紀1:19</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#t3">出埃及記4:5</a>
+                    <!--這是用Bootstrap的框架方式，設定一個顯示之導航連結，當按下此連結時，就會顯示
+                    所對應的內容，連結指定之東西會對道下方id
+                    nav-link 這是屬於Bootstrap的框架中，設定一個導航連結
+                    data-bs-toggle="tab" 這是屬於Bootstrap的框架中，當按下此導航連結時，就會顯示所對
+                    應之內容
+                    active 這是屬於Bootstrap的框架中，設定第一個顯示之導航項目-->
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#t4">詩篇3:8</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="Mytabco">
+            <!--這是用Bootstrap的框架方式，對上方那一組導航項目個別設定文字區，指定id來辨識
+            tab-content 這是屬於Bootstrap的框架中，針對上方的一組導航項目個別設定文字區-->
+            
+                <div class="tab-pane fade" id="t2"><p>有晚上，有早晨，是第四日。</p></div>
+                <div class="tab-pane fade show active" id="t3"><p>如此好叫他們信耶和華─他們祖宗的神，就是<br>
+                <!--這是用Bootstrap的框架方式，設定一個導航項目與它之內容區顯示，而且淡出淡入的內容區，第一個顯示出
+                的內容區
+                tab-pane 這是屬於Bootstrap的框架中，設定此導航項目與它的文字區一起顯示-->
+
+                    亞伯拉罕的神，以撒的神，雅各的神，是向你顯現了。</p></div>
+                <div class="tab-pane fade" id="t4"><p>救恩屬乎耶和華；願你賜福給你的百姓。（細拉）</p></div>
+            </div>
+        </div>
+
+        <nav class="navbar bg-body-tertiary">
+        <!--這是設定成Bootstrap框架中的一個背景為中性灰色之主導航欄
+        bg-body-tertiary 這是屬於Bootstrap的框架中，設定背景顏色為
+        柔和的灰色-->
+
+            <div class="container-fluid">
+            <!--這是用Bootstrap的框架方式，設定一個會隨螢幕
+            大小而調整長條框大小-->
+
+                <a class="navbar-brand" href="#"><img src="寶貝球.png" width="50px"></a>
+                <!--這是設定成Bootstrap框架中的一個可按下連結之logo圖案，此圖案的寬度為50px
+                navbar-brand 這是屬於Bootstrap的框架中，設定一個標誌、logo--> 
+
+            </div>
+        </nav>
+    </body>
+</html>

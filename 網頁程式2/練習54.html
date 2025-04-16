@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>練習54</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <p><a class="btn btn-warning" data-bs-toggle="collapse" href="#ku">箴言17:3</a></p>
+            <div class="collapse" id="ku">
+                <div class="card card-body">
+                    鼎為煉銀，爐為煉金；惟有耶和華熬煉人心。
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="dropdown">
+                <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown">
+                高中課程</button>
+                <ul class="dropdown-menu">
+                    <li><h4 class="dropdown-header">必修課</h4></li>
+                    <!--這是設定成Bootstrap框架中的下拉式選單內其中一個種類之開頭標題-->
+
+                    <li><a class="dropdown-item" href="math.html">數學</a></li>
+                    <li><a class="dropdown-item" href="chis.html">國語</a></li>
+                    <li><a class="dropdown-item" href="Engl.html">英文</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <!--這是用Bootstrap的框架方式，設定一條分隔線來分開下拉式選單的兩種類型標題-->
+
+                    <li><h4 class="dropdown-header">選修課</h4></li>
+                    <li><a class="dropdown-item" href="nation.html">生物</a></li>
+                    <li><a class="dropdown-item" href="cji.html">物理</a></li>
+                    <li><a class="dropdown-item" href="cili.html">化學</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-md bg-body-tertiary">
+        <!--這是用Bootstrap的框架方式，設定一個導航區域，並在區域內放置響應
+        式之導航欄，導航區域的背景顏色為灰色
+        navbar 這是屬於Bootstrap的框架中，設定一個已經加添樣式之導航欄
+        navbar-expand-md 這是屬於Bootstrap的框架中，設定此導航欄能隨著不同設備的
+        螢幕而調整成漢堡或折疊的選單-->
+
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">工作坊</a>
+                <!--這是用Bootstrap的框架方式，設定一個導航欄之品牌、logo標
+                示，然後對這個標示設定文字大小、居中對齊樣式-->
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbar1">
+                <!--這是用Bootstrap的框架方式，設定一個用來響應式導航欄(即是摺疊或是漢堡選單)
+                ，並讓這個按鈕執行摺疊模式，當按下此按鈕時，此導航欄會顯示或隱藏
+                navbar-toggler 這是屬於Bootstrap的框架中，設定一個響應式導航欄(即是摺疊或漢堡
+                式選單)
+                data-bs-toggle="collapse" 這是屬於Bootstrap的框架中，設定此按鈕觸發摺疊行為
+                data-bs-target="#navbar1" 這是屬於Bootstrap的框架中，當按下此按鈕時，此導航欄
+                會顯示或隱藏-->
+
+                    <span class="navbar-toggler-icon"></span>
+                    <!--這是用Bootstrap的框架方式，設定將此導航欄轉換成
+                    漢堡式菜單-->
+
+                </button>
+                <div class="collapse navbar-collapse" id="navbar1">
+                <!--這是用Bootstrap的框架方式，當在小螢幕時，將此導航欄設
+                定成折疊選單可顯示或隱藏，需要時才會展開
+                collapse 這是屬於Bootstrap的框架中，當小螢幕設備時，將此導
+                航欄設定成可顯示或隱藏的折疊式選單
+                navbar-collapse 這是屬於Bootstrap的框架中，設定讓導航欄在
+                小螢幕轉成自動折疊的折疊式選單，需要時再展開-->
+
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">書籍</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">文具</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            文創商品</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">書籤</a>
+                                <a class="dropdown-item" href="#">生日卡</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </body>
+</html>
