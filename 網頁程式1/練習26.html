@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta charset="viewport" content="width=device-width,initial-scale=1">
+        <title>練習26</title>
+
+        <script>
+        /*這是設定JavaScript之標籤*/
+
+            function shoM2(){
+                var userN2 = prompt("請輸入您的名字(匿名)","");
+                alert(userN2 + "您好~you win!");
+            }
+            function CtoF(c1){
+                var f1 = c1 * 1.8 + 32;
+                alert("攝氏" + c1 +"度轉換為華氏" + f1 + "度");
+            }
+            var t1 = prompt("請輸入攝氏溫度:","");
+            CtoF(t1);
+            /*這是當呼叫函式時，同時要將輸入數值的變數也放入*/
+
+            function shoM3(){
+                window.alert(n1);
+            }
+
+            var n1 = '哈哈';
+            shoM3();
+            window.alert(n1);
+
+            var n2 = prompt("請輸入一個數字:","");
+            if(n2 >= 90)
+                alert("恭喜! 您獲得4000元");
+            else if(n2 < 90 && n2 >= 80)
+                alert("恭喜! 您獲得3000元");
+            else if(n2 < 80 && n2 >= 70)
+                alert("恭喜! 您獲得2000元");
+            else if(n2 < 70 && n2 >= 60)
+                alert("恭喜! 您獲得1000元");
+            else
+                alert("無法獲得"); 
+
+            let s5 = [['編號','顏色','編號','顏色','編號','顏色'],
+                      ['000000','黑色','000700','??','000095','??'],
+                      ['034501','??','0671a1','??','0091a2','??'],
+                      ['0673c2','??','00371a','??','0381ac','??']];
+
+            document.write('<table border="1">');
+            for(let a1 = 0;a1 < s5.length; a1++){
+                document.write('<tr>');
+                for(let a2 = 0;a2 < s5[a1].length;a2++)
+                    document.write('<td>' + s5[a1][a2] + '<td>');
+                    document.write('<tr>');
+                /*這是用JavaScript寫一個雙重迴圈，但裡面不能加{}之程式語法*/
+
+            }
+            document.write('<table>');
+
+            let dt2 = new Data();
+            let dt3 = new Date('December 27,1999 05:30:45');
+            /*這是設定一個存入日期物件的內容之變數*/
+
+            let dt4 = new Date('1999-12-27T05:30:45');
+            let dt5 = new Date(1999,12,27,5,30,45);
+            let dt6 = new Date(1999,12,27);
+            let dt7 = new Date(67341100005);
+
+            let dt8 = new Date();
+            dt8.getFullYear(1999);
+            /*這是設定此變數之年份物件的值為1999*/
+
+            dt8.getMonth(12);
+            /*這是設定此變數之月份物件的值為12*/
+
+            dt8.getDate(27);
+            /*這是設定此變數之日期物件的值為27*/
+
+            dt8.getHours(5);
+            /*這是設定此變數之時物件的值為5*/
+
+            dt8.getMinutes(30);
+            /*這是設定此變數之分鐘物件的值為30*/
+
+            dt8.getSeconds(45);
+            /*這是設定此物件之秒物件的值為45*/
+
+            document.write("dt2的日期時間為" +dt2+ "<br>");
+            document.write("dt3的日期時間為" +dt3+ "<br>");
+            document.write("dt4的日期時間為" +dt4+ "<br>");
+            document.write("dt5的日期時間為" +dt5+ "<br>");
+            document.write("dt6的日期時間為" +dt6+ "<br>");
+            document.write("dt7的日期時間為" +dt7+ "<br>");
+            document.write("dt8的日期時間為" +dt8);
+        </script>
+    </head>
+    <body onload="javascript:shoM2();">
+
+        <a href="javascript:window.alert('您好!!! , Guuo');">顯示訊息</a>
+    </body>
+</html>

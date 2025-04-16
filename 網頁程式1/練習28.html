@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta charset="viewport" content="width=device-width,initial-scale=1.0">
+
+        <title>練習28</title>
+
+        <script>
+            var n4 = prompt("請樹入一個數字:","");
+            if(n4 >= 70)
+                alert("證照通過");
+            else
+                alert("不及格");
+
+            function shoM4(){
+                var m1 = 'UNO哈';
+                window.alert(m1);
+            }
+            shoM4();
+            window.alert(m1);
+            /*這是沒有找到那個變數*/
+
+            
+
+            var x1 = 2;
+            try{         //這是在此處理錯誤時，會到下一個
+                var y = x1 / x2;
+            }catch(e){
+                document.write(e.name + '<br>' + e.message);
+            } finally {
+                document.write('<br>例外處理完畢!');
+            }
+            /*這是用JavaScript寫一個例外處理之程式語法*/
+            
+            document.write(Math.abs(-56)+ '<br>');
+            /*這是用JavaScript寫一個計算此數值的絕對值之程式語法*/
+        </script>
+    </head>
+    <body>
+        <h1>銘謝惠顧&raquo;下次再來&raquo;謝謝惠顧</h1>
+        <script src="two_eight.js"></script>
+        <!--這是設定一個javascript的標籤來呼叫javascript檔案來執行-->
+
+        <noscript>無法使用javascript</noscript>
+        <!--這是設定一個JavaScript無法使用或禁用之標籤-->
+
+        <ul>
+            <li>名片</li>
+            <li>書籤</li>
+            <li>卡片</li>
+            <li>筆記本</li>
+        </ul>
+
+        <script src="two_eight1.js"></script>
+
+        <h1>美食推薦</h1>
+        <ul>
+            <li id="q1">雞肉</li>
+            <li id="q2">ping</li>
+        </ul>
+
+        <button id="toggle-button" onclick="togg('q3','toggle-button')">
+        顯示按鈕</button><br>
+
+        <div id="q3" style="display: none;">
+            隱藏與顯示切換
+        </div>
+
+        <script src="two_eight2.js"></script>
+
+        <button onclick="addListItem('listId')">
+        新增清單項目</button>
+
+
+        <ul id="listId"></ul>
+        <script src="two_eight3.js"></script>
+        
+         <h1 id="tle1">箴言、創世紀、以弗所書</h1>
+        <form>
+            <input type="radio" name="color" value="rebeccapurple">紫紅色<br>
+            <input type="radio" name="color" value="yellowgreen">青色<br>
+            <input type="radio" name="color" value="plum">粉紅色<br>
+            <input type="radio" name="color" value="skyblue">淺藍色
+        </form>
+
+        <button onclick="changecolor()">切換顏色</button><br>
+        <script src="two_eight4.js"></script>
+
+        <form>
+            <label for="usName">姓名:</label>
+            <input type="text" id="usName" size="12"><br>
+            <label for="usPD">密碼:</label>
+            <input type="password" id="usPD" size="15"><br>
+            <input type="submit" onclick="shRes()">
+            <input type="reset">
+        </form>
+        
+        <script src="two_eight5.js"></script>
+    </body>
+</html>

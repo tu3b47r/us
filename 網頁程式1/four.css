@@ -1,0 +1,11 @@
+@charset "UTF-8";
+.container{
+    display: flex;
+    align-items: baseline;
+    background: violet;
+}
+.item{
+    background: #5f702a;
+    padding: 11px;
+    margin: 11px;
+}

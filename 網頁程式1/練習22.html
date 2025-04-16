@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="two_two.css" type="text/css">
+        <meta name="viewport" content="width:device-width, initial-scale=1">
+        
+        <title>練習22</title>
+        <style>
+            table{
+                border: 3px solid fuchsia;
+                border-collapse: separate;
+            }
+            th,td{
+                border: 5px solid rgb(247, 247, 66);
+            }
+            h1{
+                animation-name: slide;
+                /*這是針對此標籤設定動畫的名稱*/
+
+                animation-duration: 4s;
+                /*這是針對此標籤設定動畫的撥放速度*/
+
+                animation-timing-function: linear;
+                /*這是針對此標籤設定動畫的平均速度之樣式*/
+            }
+            @keyframes slide{
+                from{
+                    width: 100%;
+                    margin-left: 100%;
+                }
+                to{
+                    width: 100%;
+                    margin-left: 0%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>常用的菜</caption>
+            <tr>
+                <th>菜名</th>
+                <th>大約的價格</th>
+            </tr>
+            <tr>
+                <td>高麗菜</td>
+                <td>90~150元</td>
+            </tr>
+            <tr>
+                <td>地瓜葉</td>
+                <td>20~40元</td>
+            </tr>
+        </table>
+        <div class="container">
+            <div class="item">經文卡片</div>
+            <div class="item">分享頻道</div>
+            <div class="item">宣傳DM</div>
+        </div>
+        <br>
+        <h1>Hallo~ #$#$#$</h1>
+    </body>
+</html>

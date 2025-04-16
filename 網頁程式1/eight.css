@@ -1,0 +1,37 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    min-width: 300px;
+    max-width: 1000px;
+    background: #d3f561;
+    margin: 0 auto;
+}
+header{
+    width: 100%;
+    background: #f3a569;
+}
+main{
+    width: 60%;
+    /*這是針對此標籤設定在範圍內的寬占多少空間之樣式*/
+
+    height: 250px;
+    background: #e4e23f;
+    float: left;
+    /*這是針對此標籤設定放在範圍內的那一邊之樣式*/
+
+}
+aside{
+    width: 35%;
+    height: 250px;
+    background: burlywood;
+    float: right;
+}
+footer{
+    width: 100%;
+    background: cadetblue;
+    clear: both;
+}

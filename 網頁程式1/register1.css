@@ -1,0 +1,60 @@
+@charset "UNF-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: #3cbfe0;
+}
+.container{
+  width: 70%;
+  background: #a4b0b3;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(131, 242, 198, 0.777);
+}
+h1{
+  margin: 20px;
+  text-align: center;
+}
+table{
+  width: 100%;
+  margin-bottom: 20px;
+  /*這是針對此標籤設定文字與底部邊框的間距之樣式*/
+
+  border-collapse: collapse;
+  /*這是針對此標籤設定邊框合併成一個、顏色統一之樣式*/
+
+}
+table,th,td{
+  border: 4px solid #194c06;
+}
+th,td{
+  padding: 20px;
+  /*這是針對此標籤設定文字與邊框的間距之樣式*/
+
+  text-align: left;
+}
+th{
+  background: burlywood;
+}
+button[type="submit"]{
+  display: block;
+  cursor: pointer;
+  /*這是針對此標籤設定滑鼠之樣式*/
+
+  margin: 0 auto;
+  /*這是針對此標籤設定自動調整與外面的左右間距之樣式*/
+
+  padding: 15px 35px;
+  background: cadetblue;
+  color: #d41c1c;
+  border: none;
+  border-radius: 12px;
+  /*這是針對此標籤設定圓角之樣式*/
+
+}
+button[type="submit"]:hover{
+  background: beige;
+}

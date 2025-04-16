@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="two_three.css" type="text/css">
+        <link rel="stylesheet" href="two_three1.css" type="text/css">
+        <meta name="virport" content="width=device-width, initial-scale=1">
+        
+        <title>練習23</title>
+        <style>
+            table{
+                border: 5px solid gold;
+                width: 120px;
+                table-layout: fixed;
+            }
+            td,th{
+                border: 2px solid palevioletred;
+            }
+            h1{
+                animation-name: blink;
+                animation-duration: 200ms;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                /*這是針對此標籤的文字設定重複顯示次數之樣式
+                animation-iteration-count: infinite; 這是設定無限重複次數*/
+        
+                animation-direction: alternate;
+                /*這是針對此標籤設定文字在循環是否會反向播放
+                animation-direction: alternate; 這是設定正反交替播放*/
+
+            }
+            @keyframes blink{
+                0%{
+                    opacity: 0;
+                    /*這是針對動畫中的文字設定透明度
+                    0為完全透明*/
+
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>過年常去的夜市</caption>
+            <tr>
+                <th>地區</th>
+                <th>夜市名稱</th>
+            </tr>
+            <tr>
+                <td>台中市北區</td>
+                <td>一中街</td>
+            </tr>
+            <tr>
+                <td>台北士林區</td>
+                <td>士林夜市</td>
+            </tr>
+        </table>
+    <h1>詹姆士餅乾好吃</h1>
+
+    <div class="container">
+        <div class="item">水果</div>
+        <div class="item">蔬菜</div>
+        <div class="item">肉</div>
+    </div>
+
+    <div class="container">
+        <h2>聯絡我們</h2>
+        <form class="custom-form">
+            <label for="name">姓名：</label>
+            <input type="text" id="name" name="name"
+            required>
+            <label for="email">信箱：</label>
+            <input type="email" id="email" 
+            name="email" required>
+            <label for="msg">訊息</label>
+            <input type="msg" id="msg" cows="9" name="msg"
+            required> 
+            <button type="submit">送出</button>
+        </form>
+
+        <script>
+            var sum=function(a,b){
+            /*這是設定一個有放入函式的變數
+            var sum 這是設定一個變數*/
+
+                return a + b;
+                /*這是設定回傳計算結果*/
+
+            };
+
+            window.alert('30與40的總和為:'+sum(30,40));
+            /*這是設定將計算結果和文字顯示在網頁中一個小視窗*/
+
+            var total=0;
+            for(var i=1;i<=12;i++){
+                if(i > 9) break;
+                /*這是設定當變數大於9就結束之條件式*/
+
+                total +=i;
+            }
+
+            alert(total);
+            /*這是設定將總和顯示在網頁中一個小對話框*/
+
+        </script>
+    </body>
+</html>

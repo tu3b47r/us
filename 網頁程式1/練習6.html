@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="six.css" type="text/css">
+        
+        <title>練習6</title>
+        <style>
+            h1{
+                animation-name: t3;
+                animation-duration: 4s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+
+            @keyframes t3{
+                0%{
+                    width: 100%;
+                    margin-left: 100%;
+                }
+                50%{
+                    width: 100%;
+                    margin-left: 40%;
+                    font-size: 100px;
+                }
+                100%{
+                    width: 100%;
+                    margin-left: 0%;
+                }
+            }
+            @media screen and (max-width: 500px){
+            /*這是指定手機之像素大小*/
+
+                body {
+                    background: indianred;
+                    /*這是針對所指定去設定背景的顏色之樣式*/
+
+                }
+            }
+
+            @media screen and (min-width:501px) and (max-width:768px){
+            /*這是指定平板之像素大小*/
+
+                body {
+                    background: navajowhite;
+                }
+            }
+
+            @media screen and (min-width:769px) {
+            /*這是指定電腦之像素大小*/
+
+                body {
+                    background: salmon;
+                }
+            }
+        </style>    
+    </head>
+    <body>
+        <article>
+            <p>聯絡負責人信箱</p>
+            <address>
+                <a href="mailto:u7jk13n@gmail.com">u7jk13n@gmail.com</a>
+            </address>    
+        </article>
+        <!--這是將個人文字資訊和信箱放入網站-->
+        <ul>
+            <li><a href="#3-4">箴言3:4</a></li>
+            <li><a href="#3-5">箴言3:5</a></li>
+            <!--這是設計一個索引，按下這個索引後會跳到指定的地方-->
+        </ul>
+        <ul>
+            <li><a href="國中數學測驗.html">國中數學測驗</a></li>
+            <!--這是連結到另一個網頁-->
+
+            <li><a href="text.rar" download>下載text.rar</a></li>
+            <!--這是在網頁中做一個下載檔案-->
+
+            <li><a href="https://tw.yahoo.com">連結到yahoo網站</a></li>
+            <!--這是直接連到指定的網站-->
+
+            <li><a href="mailto:u7jk13n@gmail.com">問題在此回信</a></li>
+            <!--這是在網頁中設置信箱，能讓別人做回覆-->
+        </ul>
+        <!--這是有標記的每項連接-->
+        <a href="https://www.gotop.com.tw" target="_blank">碁峰資訊網站</a><br>
+        <!--這是沒有標記選項的直接連接網站-->
+        統測倒數<del datetime="2024.4.15">17</del>
+        <del datetime="2024.4.16">16</del>
+        <!--這是刪除文字內容-->
+        <ins datetime="2024.4.17">15</ins>
+        <ul>
+            <li>小芳作品
+                <ol type="A">
+                    <li>便條紙</li>
+                    <li>小本筆記本</li>
+                    <li>可愛圖之卡片</li>
+                    <li>溫馨個人名片</li>
+                </ol>
+                <!--這是設計由英文A開始標記之項目-->
+            </li>
+            <li>小維作品
+                <ol type="1">
+                    <li>包裝紙</li>
+                    <li>大本筆記本</li>
+                    <li>個人書籍</li>
+                    <li>書籤</li>
+                </ol>
+                <!--這是設計由數字1開始標記之項目-->
+            </li>
+        </ul>
+        <dl>
+            <dt id="3-4">箴言3:4</dt>
+            <!--這是設定一個索引值能被呼叫到-->
+            <dd>這樣，你必在神和世人眼前蒙恩寵，有聰明</dd>
+            <dt id="3-5">箴言3:5</dt>
+            <dd>你要專心仰賴耶和華，不可以靠自己的聰明</dd>
+        </dl>
+
+        <div class="container">
+            <div class="item">國語</div>
+            <div class="item">英文</div>
+            <div class="item">英文文章</div>
+            <div class="item">數學</div>
+            <div class="item">物理</div>
+            <div class="item">生物</div>
+            <div class="item">化學</div>
+            <div class="item">地球科學</div>
+            <div class="item">才藝</div>
+            <div class="item">人生</div>
+        </div>
+        <br>
+        <h1>平安、喜樂</h1>
+    </body>
+</html>

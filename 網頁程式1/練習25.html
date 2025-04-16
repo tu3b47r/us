@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta charset="viewport" content="width=device-width,initial-scale=1">
+        <!--這是設定讓不同螢幕尺寸和解析度下能正常顯示之樣式
+        width=device-width 這是設定會自動調整頁面內容來符合設備的大小之樣式
+        initial-scale=1 這是設定頁面的初始縮放比例之樣式，1代表不縮放-->
+
+        <meta charset="keywords" content="證照,經歷,作品">
+        <!--這是設定網頁搜尋的關鍵字之樣式-->
+
+        <meta charset="description" content="個人之證照,經歷,作品,免費觀看與建議">
+
+        <link rel="icon" type="image/png" sizes="64x64" href="">
+        <!--這是設定一個有長寬度的圖片，然後小的顯示在標題旁-->
+
+        <link rel="stylesheet" type="text/css" href="two_five.css">
+        <title>練習25</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="t1">個人履歷</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="Certificate.html">證照</a></li>
+                <li><a href="Skill.html">經歷</a></li>
+                <li><a href="Project.html">作品</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2 id="t2">工作經歷</h2>
+
+            <div class="grid1">
+                <div class="g1"> 
+                <!--這是設定個別選單和詳細內容-->
+
+                    <img src="萬和國中.jpg" class="img-work">
+                    <h3>拍攝者:Howei</h3>
+                    <p><a class="a-detail" href="oneho_school.html">詳細資料&raquo;</a></p>
+                </div>
+
+                <div class="g1">
+                    <img src="農匠.jpg" class="img-work">
+                    <h3>拍攝者:Howei</h3>
+                    <p><a class="a-detail" href="farm_carft.html">詳細資料&raquo;</a></p>
+                </div>
+
+                <div class="g1">
+                    <img src="臺中市立五權國民中學.jpg" class="img-work">
+                    <h3>拍攝者:Howei</h3>
+                    <p><a class="a-detail" href="fivechan_school.html">詳細資料&raquo;</a></p>
+                </div>
+
+                <div class="g1">
+                    <img src="全能人力.jpg" class="img-work">
+                    <h3>拍攝者:Howei</h3>
+                    <p><a class="a-detail" href="Almighty_work.html">詳細資料&raquo;</a></p>
+                </div>
+
+                <div class="g1">
+                    <img src="聯德.jpg" class="img-work">
+                    <h3>拍攝者:Howei</h3>
+                    <p><a class="a-detail" href="Advertise.html">詳細資料&raquo;</a></p>
+                </div>
+
+                <div class="g1">
+                    <img src="聯德.jpg" class="img-work">
+                    <h3>拍攝者:Howei</h3>
+                    <p><a class="a-detail" href="Advertise.html">詳細資料&raquo;</a></p>
+            </div>
+        </div>
+        </main>
+
+        <footer>
+            <hr>
+            <a class="a-bout1" href="Personal_resume.html">個人履歷</a>，
+            <a class="a-bout1" href="Serve_condition.html">服務條款</a>，
+            <a class="a-bout1" href="Privacy.html">隱私權政策</a>
+            <a class="back" href="#">Back to top</a>
+        </footer>
+
+        <script>
+            function shM1(){
+                var userN1 = prompt("請輸入您的名字:","");
+                alert(userN1 + "您好!BBQ"); 
+            }
+            /*這是設定一個輸入名字的函式
+            function shM1(){
+            } 這是設定來宣告一個函式*/
+
+            shM1();
+            /*這是設定來呼叫函式*/
+        </script>
+    </body>
+</html>
