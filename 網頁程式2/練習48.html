@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>練習48</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        <h1>UIUI---UNO哈蝦</h1>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="four_eight.js"></script>
+
+        <div class="table-responsive">
+        <!--這是用Bootstrap的框架方式，設定當使用手機看時，
+        表格能左右滑動看完整內容-->
+
+            <table class="table">
+                <tr>
+                    <th>檔案名稱</th>
+                    <th>功用</th>
+                </tr>
+                <tr>
+                    <td>練習16</td>
+                    <td>文字外觀、文字標記</td>
+                </tr>
+                <tr>
+                    <td>練習17</td>
+                    <td>文字倒影、圖片外框編制</td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <p class="text-light bg-dark">uiuiu</p>
+            <!--這是設定成Bootstrap框架中的文字顏色為灰色
+            、背景為綠色帶點黑色-->
+
+            <p class="text-light-emphasis">kkl</p>
+            <!--這是設定成Bootstrap框架中的文字顏色為加深
+            後的灰色-->
+
+            <p class="text-dark">uionk</p>
+            <!--這是設定成Bootstrap的文字顏色為黑綠色-->
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="four_eight1.js"></script>
+
+        <button id="bt71">隱藏</button>
+        <button id="bt72">顯示</button>
+        <h1>馬大、馬太福音</h1>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="four_eight2.js"></script>
+
+        <ul>
+            <li>約翰壹書</li>
+            <li>約翰二書</li>
+            <li>約翰三書</li>
+            <li>猶大書</li>
+        </ul>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script>
+            $('li').even().css('color',hotpink);
+            $('li').odd().css('color',blur);
+        </script>
+
+        <input type="text">
+        <p></p>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="four_eight3.js"></script>
+
+        <ul>
+            <li>讚美</li>
+            <li>敬拜</li>
+            <li>一生</li>
+            <li>不要愛世界</li>
+            <li>神的到</li>
+            <li>喜悅</li>
+            <li>蒙恩</li>
+        </ul>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script>
+            $('li').filter(':odd').css('color','darkorange');
+            /*這是用jQuery寫法針對此標籤設定過濾奇數項目，其餘轉換成
+            所指定之樣式的程式語法
+            filter() 這是用jQuery寫法設定過濾指定之東西的程式語法*/ 
+            
+        </script>
+
+        <p><span>Houui</span>,what are you doing?</p>
+        <p>I am <span>swinning</span> on time</p>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script>
+            $('p').find('span').css('color','blue');
+            /*這是用jQuery寫法設定找尋指定的標籤，然後設定樣式之程式
+            語法
+            find('span') 這是用jQuery寫法設定找尋指定標籤之程式語法*/
+
+        </script>
+    </body>
+</html>

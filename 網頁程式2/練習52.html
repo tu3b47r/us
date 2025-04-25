@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>練習52</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <a class="text-white bg-dark"></a>
+        </div>
+
+        <div class="btn-group btn-group-lg" role="group">
+        <!--這是用Bootstrap的框架方式，設定將所有按鈕從原始變大
+        btn-group-lg 這是屬於Bootstrap的框架中，設定將所有按鈕
+        變大-->
+
+            <button type="button" class="btn btn-success">hj</button>
+            <button type="button" class="btn btn-success">hu</button>
+            <button type="button" class="btn btn-success">ht</button>
+        </div>
+        <div class="btn-group btn-group-sm" role="group">
+        <!--這是用Bootstrap的框架方式，設定將所有按鈕從原始變小
+        btn-group-sm 這是屬於Bootstrap的框架中，設定將所有按鈕
+        變小-->
+
+            <button type="button" class="btn btn-secondary">書本</button>
+            <button type="button" class="btn btn-secondary">文具</button>
+            <button type="button" class="btn btn-secondary">哈哈</button>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <img class="card-img-top" src="寶貝球.png">
+                        <!--這是用Bootsrap的框架方式，設定將圖片放入此卡片裡頂部中
+                        card-img-top 這是屬於Bootstrap的框架中，設定將圖片此卡片
+                        內頂部中-->
+
+                        <div class="card-body">
+                            <h5 class="card-title">創世紀22:11</h5>
+                            <p class="card-text">耶和華的使者從天上呼叫他說：亞伯拉罕！亞伯拉罕！他說：我在這裡。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <img class="card-img-top" src="寶貝球.png">
+                        <div class="card-body">
+                            <h5 class="card-title">羅馬書5:9</h5>
+                            <p class="card-text">現在我們既靠著他的血稱義，就更要藉著他免去神的忿怒。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="myCar" class="carousel slide" data-bs-ride="carousel">
+        <!--這是用Bootstrap的框架方式，設定一個能切換圖片，自動的輪播套件
+        carousel 這是屬於Bootstrap的框架中，設定一個輪播套件
+        slide 這是屬於Bootstrap的框架中，設定切換圖片
+        data-bs-ride="carousel" 這是屬於Bootstrap的框架中，設定輪播套件能自動
+        運作-->
+
+            <div class="carousel-indicators">
+            <!--這是用Bootstrap的框架方式，設定一個小的長方塊或圓點
+            ，來顯示輪播圖片的目前位置-->
+
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
+                <!--這是用Bootstrap的框架方式，設定一個控制輪播的按鈕，指定id為0就是指定第一個圖片，
+                也是開頭第一個顯示之圖片
+                data-bs-target="#myCarousel" 這是屬於Bootstrap的框架中，設定一個控此制輪播、同時
+                也為控制id
+                data-bs-slide-to="0" 這是屬於Bootstrap的框架中，設定第一張圖片的id為0
+                class="active" 這是Bootstarp的框架中，設定此圖片為顯示第一張-->
+
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+            <!--這是用Bootstrap的框架方式，設定一個組放入所有輪播項目-->
+
+                <div class="carousel-item">
+                    <img src="土撥鼠.png" class="d-block w-100">
+                    <!--這是用Bootstrap的框架方式，設定一個區塊，然後將圖片放入這個區
+                    塊中、圖片比例為100%、不會與其他圖片並排
+                    d-block 這是屬於Bootstrap的框架中，設定一個能將圖片放入之區塊，甚至
+                    不會與其他並排
+                    w-100 這是屬於Bootstrap的框架中，設定圖片比例為100%-->
+
+                    <div class="carousel-caption">
+                        <h5></h5>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                <!--這是用Bootstarp的框架方式，設定一個第一個顯示出來之輪
+                播項目
+                carousel-item 這是屬於Bootstrap的框架中，設定一個輪播項目-->
+
+                    <img src="水母.png" class="d-block w-100">
+                    <div class="carousel-caption">
+                    <!--這是用Bootstrap的框架方式，設定在輪播項目中顯示一
+                    段文字-->
+
+                        <h5></h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="狗狗背影.png" class="d-block w-100">
+                    <div class="carousel-caption">
+                        <h5></h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
+            data-bs-slide="prev">
+            <!--這是用Bootstrap的框架方式，設定一個來控制輪播圖片顯示上一頁的按鈕，當按下此按鈕時，輪播
+            會顯示上一張或下一張圖片
+            class="carousel-control-prev" 這是屬於Bootstrap的框架中，設定一個控制輪播顯示上一頁的按鈕
+            data-bs-slide="prev" 這是屬於Bootstrap的框架中，當按下此按鈕時，輪播就會顯示上一頁或下一頁
+            的圖片-->
+
+                <span class="carousel-control-prev-icon"></span>
+                <!--這是用Bootstrap的框架方式，在一個行內設定用來顯示上一頁的箭頭標示
+                carousel-control-prev-icon 這是屬於Bootstrap的框架中，設定來顯示輪播
+                上一頁的箭頭標示-->
+
+                <span class="visually-hidden">Previous</span>
+                <!--這是用Bootstrap的框架方式，設定將隱藏的按鈕視覺化呈現，也是一個輔助技術-->
+
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
+            data-bs-slide="next">
+            <!--這是用Bootstrap的框架方式，設定一個來控制輪播圖片顯示下一頁的按鈕，當按下此按鈕時，輪播
+            會顯示下一張圖片
+            carousel-control-next 這是屬於Bootstrap的框架中，設定一個控制輪播顯示下一頁的按鈕
+            data-bs-slide="next" 這是屬於Bootstrap的框架中，當按下此按鈕時，輪播就會顯示下一頁的圖片-->
+
+                <span class="carousel-control-next-icon"></span>
+                <!--這是用Bootstrap的框架方式，在一個行內設定用來顯示下一頁的箭頭標示
+                carousel-control-next-icon 這是屬於Bootstrap的框架中，設定來顯示輪播下一頁的箭頭標
+                示(通常是向右標示)-->
+                
+                <span class="visually-hidden">next</span>
+            </button>
+        </div>
+    </body>
+</html>

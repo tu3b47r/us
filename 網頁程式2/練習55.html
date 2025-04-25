@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>練習55</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md bg-warning" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">工作室</a>
+                <button class="navbar-toggler" type="button" data-bs-target="#ku1">
+                <span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="ku1">
+                    <ul class="navbar-nav me-auto">
+                    <!--這是用Bootstrap的框架方式，設定一個導航欄的項目，並且要對齊左邊
+                    ，而每個項目要填滿主標題右邊
+                    navbar-nav 這是屬於Bootstrap的框架中，設定一個導航欄的項目
+                    me-auto 這是屬於Bootstrap的框架中，設定將此項目對其主標題左邊，並且
+                    每個項目要填滿主標題右邊空間-->
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">公司簡介</a>
+                        </li>
+                        <li class="nav-item active">
+                        <!--這是用Bootstrap的框架方式，設定一個當前顯示的導航項目
+                        nav-item 這是屬於Bootstrap的框架中，設定一個導航項目-->
+
+                            <a class="nav-link" href="#">視頻</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            產品介紹</a>
+                            <!--這是用Bootstrap的框架方式，設定一個觸發下拉式選單的導航連結
+                            nav-link 這是屬於Bootstrap的框架中，設定一個導航連結
+                            dropdown-toggle 這是屬於Bootstrap的框架中，當按下連結時，就執行
+                            下拉式選單
+                            data-bs-toggle="dropdown" 這是屬於Bootstrap的框架中，當按下dropdown時
+                            ，就要打開關聯之下拉式選單-->
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">日常用品</a>
+                                <a class="dropdown-item" href="#">文具</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">光工作室</a>
+                <span class="navbar-text">創意設計多樣化</span>
+                <!--這是用Bootstrap的框架方式。在導航欄內設定一個
+                文字內容區，內容區有設定基本樣式(文字間距、文字對齊
+                或水平-->
+
+            </div>
+        </nav>
+
+        <nav class="navbar fixed-top bg-body-tertiary">
+        <!--這是用Bootstrap的框架方式，設定一個背景顏色為中性灰色
+        的導航欄，且將此導航欄放置在網頁頁面頂端
+        fixed-top 這是屬於Bootstrap的框架方式，設定將元件放置在網
+        頁頁面頂端-->
+
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">哈哈工作室</a>
+            </div>
+        </nav>
+
+        <nav>
+            <ul class="pagination pagination-sm">
+            <!--這是用Bootstrap的框架方式，設定一個小的分頁頁碼導航
+            pagination 這是屬於Bootstrap的框架中，設定一個分頁頁碼
+            導航
+            pagination-sm 這是屬於Bootstrap的框架中，設定將此分頁導
+            航變小的-->
+
+                <li class="page-item">
+                    <a class="page-link" href="#"><span>&laquo;</span></a>
+                </li>
+                <li class="page-item active">
+                <!--這是用Bootstrap的框架方式，設定一個處於當前的分頁導航之項目
+                page-item 這是屬於Bootstrap的框架中，設定一個分頁導航之項目-->
+
+                    <a class="page-link" href="#">1</a>
+                    <!--這是設定成Bootstrap框架中的分頁導航之項目連結-->
+                    
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#"><span>&raquo;</span></a>
+                </li>
+            </ul>
+        </nav>
+    </body>
+</html>

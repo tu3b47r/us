@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>練習35</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <style>
+            div[class^="col"]{
+            /*這是用來指定此標籤中所有class以col開頭*/
+
+                background-color: cadetblue;
+                border: 1px solid gold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4" style="height: 220px;">盼望</div>
+                <!--這是用Bootstrap的框架方式，當設備螢幕≥992px時，設定一個網格中12格占4格，
+                當設備螢幕≥768px或是手機時，設定一個網格中12格占滿
+                col-md-12 這是屬於Bootstrap的框架中，當設備螢幕≥768px時，設定一個網格中12格
+                占滿
+                col-12 這是屬於Bootstrap的框架中，當設備是手機時，設定一個網格中12格占滿
+                col-lg-4 這是屬於Bootstrap的框架中，當設備螢幕≥992px時，設定一個網格中12格
+                占4格-->
+
+                <div class="col-12 col-md-6 col-lg-4" style="height: 220px;">喜樂</div>
+                <div class="col-12 col-md-6 col-lg-4" style="height: 220px;">榮耀</div>
+                <div class="col-12 col-md-6 col-lg-4" style="height: 220px;">尊貴</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="bg-success text-white">一條偏深綠色的長條框</div>
+            <!--這是設定成Bootstrap框架中的背景為偏深綠色、文字為白色-->
+
+            <div class="bg-success-subtle">一條淺綠色的長條框</div>
+            <!--這是設定成Bootstrapt框架中的背景為淺綠色-->
+
+            <div class="bg-danger text-white">一條紅色的長條框</div>
+            <!--這是設定成Bootstrap框架中的背景為紅色、文字為白色-->
+
+            <div class="bg-danger-subtle">一條粉紅色的長條框</div>
+            <!--這是設定成Bootstrap框架中的背景為粉紅色-->
+
+            <div class="bg-warning">一條黃色的長條框</div>
+            <!--這是設定成Bootstrap框架中的背景為黃色-->
+        </div>
+
+        <div class="container">
+            <span class="border border-success">一個深綠色邊框</span>
+            <!--這是設定成Bootstrap框架中的邊框為深綠色線框-->
+
+            <span class="border border-success-subtle">一個淺綠色邊框</span>
+            <!--這是設定成Bootstrap框架中的邊框為淺綠色線框-->
+
+            <span class="border border-danger">一個紅色邊框</span>
+            <!--這是設定成Bootstrap框架中的邊框為紅色線框-->
+
+            <span class="border border-danger-subtle">一個粉紅色邊框</span>
+            <!--這是設定成Bootstrap框架中的邊框為粉紅色線框-->
+            
+        </div>
+
+        <div>
+            <img src="皮卡皮卡.png" width="25%" class="rounded-0" alt="無框線圓角">
+            <img src="皮卡皮卡.png" width="25%" class="rounded-4" alt="小框線圓角">
+            <img src="皮卡皮卡.png" width="25%" class="rounded-5" alt="大框線圓角">
+        </div>
+
+        <div>
+            <input class="btn btn-danger" type="button" value="先知">
+            <!--這是設定成Bootstrap框架中的按鈕背景為紅色、文字為白色-->
+
+            <input class="btn btn-warning" type="button" value="預言">
+            <!--這是設定成Bootstrap框架中的按鈕背景為黃色，代表警告-->
+
+            <input class="btn btn-info" type="button" value="傳道人">
+            <!--這是設定成Bootstrap框架中的按鈕為藍綠色，代表傳遞訊息-->
+
+        </div>
+
+        <div class="container">
+            <p class="lead">不從惡人的計謀，不站罪人的道路，不坐褻慢人的座位，</p>
+            <!--這是將此段設定成Bootstrap框架中的字體為較大、較粗的字體-->
+
+            <p> 惟喜愛耶和華的律法，晝夜思想，這人便為有福！</p>
+        </div>
+
+        <div>
+            <img src="皮卡皮卡.png" width="36%" class="float-start">
+            <!--這是用Bootstrap的框架方式，設定圖片先顯示，然後文字對齊
+            排列在旁邊
+            float-strat 這是屬於Bootstrap框架中，設定先顯示圖片、文字對齊
+            圖片排列-->
+
+            <p>詩篇1:1<br>不從惡人的計謀，<br>不站罪人的道路，<br>不坐褻慢人的座位，</p><br>
+        </div>
+        
+        <div class="container">
+            <form>
+                <div class="my-3">
+                <!--這是將這一組填寫的上下邊距設定為0.75rem-->
+
+                    <label for="userEm1" class="form-label">電子信箱</label>
+                    <!--這是設定一個標籤之樣式-->
+
+                    <input type="email" class="form-control" id="userEm1">
+                    <!--這是用Bootstrap的框架方式，設定調整適合大小的輸入內容
+                    form-cortrol 這是屬於Bootstrap框架中，設定一個適合大小的
+                    輸入內容-->
+
+                    <div id="a5" class="form-text">必填欄位</div>
+                    <!--這是用Bootstrap的框架方式，設定將提示文字顯
+                    示在輸入框下方
+                    form-text 這是屬於Bootstrap框架中，設定在輸入框
+                    下方顯示文字-->
+
+                </div>
+                <div class="my-3">
+                    <label for="usPD1" class="form-label">密碼</label>
+                    <input type="password" class="form-control" id="usPD1">
+                    <div id="a7" class="form-text">必填欄位</div>
+                </div>
+                <button type="submit" class="btn btn-primary">提交</button>
+            </form>
+        </div>
+    </body>
+</html>

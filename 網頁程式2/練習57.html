@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>練習57</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+        <nav class="navbar fixed-bottom bg-body-tertiary">
+        <!--這是設定成Bootstrap框架中的一個背景為中性灰色之主
+        導航欄，將此導航欄固定在頁面底部
+        fixed-bottom 這是屬於Bootstrap的框架中，設定將導航欄固
+        定在頁面底部，滑動頁面不會消失-->
+
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">哈C工作室</a>
+            </div>
+        </nav>
+
+        <div>
+            <div class="dropdown">
+                <button type="button" class="btn btn-danger dropdown-toggle" 
+                data-bs-toggle="dropdown">商品</button>
+                <ul class="dropdown-menu">
+                    <li><h4 class="dropdown-header">文創商品</h4></li>
+                    <li><a class="dropdown-item" href="card.html">卡片</a></li>
+                    <li><a class="dropdown-item" href="card1.html">書籤</a></li>
+                    <li><a class="dropdown-item" href="card2.html">便條紙</a></li>
+                    <li><h4 class="dropdown-divider">宗教文物</h4></li>
+                    <li><a class="dropdown-item" href="serr.html">宗教飾品</a></li>
+                    <li><a class="dropdown-item" href="serr1.html">宗教卡片</a></li>
+                    <li><a class="dropdown-item" href="serr2.html">宗教書籍</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container text-center">
+            <img src="皮卡皮卡.png" width="40%" class="img-fluid mb-5"><br>
+            <button type="button" class="btn btn-warning" data-bs-toggle="popover"
+            data-bs-placement="bottom" data-bs-container="body" data-bs-content="皮卡皮卡">
+            按鈕1</button>
+            <!--這是用Bootstrap的框架方式，設定一個背景為黃色的按鈕，此按鈕裡面附加popover，
+            popover加入body內，popover顯示文字會在按鈕下方
+            data-bs-toggle="popover" 這是屬於Bootstrap的框架中，設定新增popover功能
+            data-bs-placement="bottom" 這是屬於Bootstrap的框架中，設定將上方指定所顯示的東西
+            在下方
+            data-bs-container="body" 這是屬於Bootstrap的框架中，設定將新增功能放入body內
+            data-bs-content="皮卡皮卡" 這是屬於Bootstrap的框架中，設定新增功能所顯示內容-->
+
+            <button type="button" class="btn btn-warning" data-bs-toggle="popover"
+            data-bs-placement="right" data-bs-title="AI圖片" data-bs-content="皮卡皮卡">
+            按紐2</button>
+            <!--這是用Bootstrap的框架方式，設定一個背景為黃色的按鈕，此按鈕裡面附加popover，
+            popover加入body內，popover顯示文字會在按鈕右方，額外加上一個主題為AI圖片
+            data-bs-placement="right" 這是屬於Bootstrap的框架中，設定將新增功能指定所顯示的
+            東西在元件右方
+            data-bs-title="AI圖片" 這是屬於Bootstrap的框架中，設定新增主題-->
+
+        </div>
+        <script>
+            const poprTrerLt = document.querySelectorAll('[data-bs-toggle="popover"]');
+            /*這是用JavaScript的語法，設定一個常數存入從上方找尋到所有符合data-bs-toggle=
+            "popover"的元件*/
+
+            const poprLt = [...poprTrerLt].map(poprTrerLtEl => new bootstrap.Popover(poprTrerLtEl));
+            /*這是用JavaScript的語法，設定一個常數存入展開式陣列，然後map進行選代，傳到一個新的Bootstrap 5
+            的初始化設定
+            [...poprTrerLt] 這是用JavaScript的語法，設定展開式陣列
+            .map() 這是用JavaScript的語法，設定來對陣列進行選代
+            bootstrap.Popover(poprTrerLtEl) 這是用JavaScript的語法，設定新增一個Bootstrap 5的初始化設定*/
+
+        </script>
+
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">fg工作室</a>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="輸入飾品">
+                    <button class="btn btn-outline-light" type="submit">確認</button>
+                </form>
+            </div>
+        </nav>
+        
+        <div class="text-center">
+            <img src="" width="50%" class="img-fluid mb-5">
+            <!--這是用Bootstrap的框架方式，設定圖片寬度比列為
+            50%，圖片會隨螢幕大小而縮放比例(響應式)、周圍間距為3rem
+            img-fluid 這是屬於Bootstrap的框架中，設定圖片會隨螢幕大
+            小而縮放比例(響應式)-->
+            
+            <button type="button" class="btn btn-success" data-bs-toggle="tooltip"
+            data-bs-title="寶貝球" data-bs-placement="top">按鈕$</button>
+            <!--這是用Bootstrap的框架方式，設定一個背景為綠色的按鈕，此按鈕裡面附加tooltip，
+            tooltip顯示文字會在按鈕上方
+            data-bs-placement="top" 這是屬於Bootstrap的框架中，設定將新增功能指定所顯示的
+            東西在元件上方-->
+
+            <button type="button" class="btn btn-success" data-bs-toggle="tooltip"
+            data-bs-title="寶貝球" data-bs-placement="bottom">按鈕@</button>
+
+        </div>
+        <script>
+            const toolpTrigrLt = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            const tooltpLt = [...toolpTrigrLt].map(toolpTrigrEl => new bootstrap.Tooltip(toolpTrigrEl));
+        </script>
+    </body>
+</html>

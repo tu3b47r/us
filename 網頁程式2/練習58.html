@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>練習58</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md bg-info">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">!@工室</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#nav2"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="nav2">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">喜樂卡</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">恩典卡</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">平安卡</a>
+                        </li>
+                        <li class="nav-link dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">本子</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">筆記本</a>
+                                <a class="dropdown-item" href="#">計算本</a>
+                                <a class="dropdown-item" href="#">作業簿</a>
+                            </div>
+                        </li>
+                    </ul>
+                <form class="d-flex">
+                    <input class="form-control me-1" type="search" placeholder="輸入文具名稱">
+                    <button class="btn btn-outline-warning" type="submit">尋找</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+
+        <div id="myCar" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCar" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#myCar" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#myCar" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#myCar" data-bs-slide-to="3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="皮卡皮卡.png" class="d-block w-70" alt="書籤">
+                    <div class="carousel-caption">
+                        <h5>~~!!</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="水母.png" class="d-block w-70" alt="便條紙">
+                    <div class="carousel-caption">
+                        <h5>7877@@</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="鳴人.png" class="d-block w-70" alt="小卡">
+                    <div class="carousel-caption">
+                        <h5>藍色、綠色、紅色</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCar"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCar"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="container-fluid my-2">
+            <div class="alert alert-primary" role="alert">
+                <a class="alert-link" href="#"><strong>詩篇112:3</strong></a>
+
+            </div>
+        </div>
+        <div class="container-fluid my-2">
+            <div class="alert alert-secondary" role="alert">
+                <a class="alert-link" href="#"><strong>詩篇112:4</strong></a>
+
+            </div>
+        </div>
+        <div class="container-fluid my-2">
+            <div class="alert alert-danger" role="alert">
+                <a class="alert-link" href="#"><strong>詩篇112:5</strong></a>
+
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+            <!--這是用Bootstrap的網格框架方式，當設備螢幕≥576px
+            (例如:手機)時，設定Bootstrap的網格12格中占6格，當設
+            備螢幕≥768px(例如:平板、小型筆電)時，設定Bootstrap
+            的網格12格中占3格
+            col-sm-6 這是屬於Bootstrap的框架中，當設備螢幕≥576px
+            (例如:手機)時，設定Bootstrap的網格12格中占6格
+            col-md-3 這是屬於Bootstrap的框架中，設定Bootstrap的
+            網格12格中占6格，當設備螢幕≥768px(例如:平板、小型筆電)
+            時，設定Bootstrap的網格12格中占3格-->
+
+                <div class="card mb-3">
+                    <img class="card-img-top" src="">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-warning" href="#"></a>
+                    </div>
+                </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-warning" href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-warning" href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-warning" href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-warning" href="#"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="container-fluid">
+            <hr>
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <p>&copy;哈G工作室&middot; <a href="#">隱私權</a>&middot;<a href="#">聯絡我們</a></p>
+        </footer>
+    </body>
+</html>
