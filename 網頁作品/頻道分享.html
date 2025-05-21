@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>20 個頻道連結頁面</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    .channel-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 800px; /* 可根據需要調整 */
+    }
+
+    .channel-container li {
+      width: 10%; /* 每列10個 */
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .channel-container a {
+      text-decoration: none;
+      color:cyan;
+      font-weight: bold;
+    }
+    h2 {
+      margin-top: 50px;
+    }
+    a {
+      text-decoration: none;
+      color: #1a73e8;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .channels-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: nowrap; /* 如果要在螢幕太小時換行，可以改為 wrap */
+      justify-content: space-between;
+    }
+    .channel-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+
+    .channel {
+      width: 33.33%;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+
+    .channel-title {
+      display: block;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: #0073e6;
+      text-decoration: none;
+    }
+
+    .channel-links a {
+      margin-right: 10px;
+      color: #555;
+      text-decoration: none;
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <h1>頻道總覽</h1>
+  <ul class="channel-container">
+    <li><a href="#channel1">頻道 1</a></li>
+    <li><a href="#channel2">頻道 2</a></li>
+    <li><a href="#channel3">頻道 3</a></li>
+    <li><a href="#channel4">頻道 4</a></li>
+    <li><a href="#channel5">頻道 5</a></li>
+    <li><a href="#channel6">頻道 6</a></li>
+    <li><a href="#channel7">頻道 7</a></li>
+    <li><a href="#channel8">頻道 8</a></li>
+    <li><a href="#channel9">頻道 9</a></li>
+    <li><a href="#channel10">頻道 10</a></li>
+    <li><a href="#channel11">頻道 11</a></li>
+    <li><a href="#channel12">頻道 12</a></li>
+    <li><a href="#channel13">頻道 13</a></li>
+    <li><a href="#channel14">頻道 14</a></li>
+    <li><a href="#channel15">頻道 15</a></li>
+    <li><a href="#channel16">頻道 16</a></li>
+    <li><a href="#channel17">頻道 17</a></li>
+    <li><a href="#channel18">頻道 18</a></li>
+    <li><a href="#channel19">頻道 19</a></li>
+    <li><a href="#channel20">頻道 20</a></li>
+  </ul>
+  </div>
+
+  <!-- 頻道內容 -->
+  <!-- 以下是示範三個頻道，剩下可依此複製替換 -->
+<div class="channel-wrapper">
+  <div class="channel">
+    <a href="https://www.youtube.com/@TechWorld" class="channel-title" target="_blank">頻道 1：TechWorld</a>
+    <div class="channel-links">
+      <a href="https://www.youtube.com/@TechWorld/videos" target="_blank">影片</a>
+      <a href="https://www.youtube.com/@TechWorld/about" target="_blank">介紹</a>
+      <a href="https://www.youtube.com/@TechWorld/community" target="_blank">社群</a>
+    </div>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <!-- 頻道 2 -->
+  <div class="channel">
+    <a href="https://www.youtube.com/@TravelLife" class="channel-title" target="_blank">頻道 2：TravelLife</a>
+    <div class="channel-links">
+      <a href="https://www.youtube.com/@TravelLife/videos" target="_blank">影片</a>
+      <a href="https://www.youtube.com/@TravelLife/about" target="_blank">介紹</a>
+      <a href="https://www.youtube.com/@TravelLife/community" target="_blank">社群</a>
+    </div>
+    <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
+  </div>
+
+  <!-- 頻道 3 -->
+  <div class="channel">
+    <a href="https://www.youtube.com/@CodeMaster" class="channel-title" target="_blank">頻道 3：CodeMaster</a>
+    <div class="channel-links">
+      <a href="https://www.youtube.com/@CodeMaster/videos" target="_blank">影片</a>
+      <a href="https://www.youtube.com/@CodeMaster/about" target="_blank">介紹</a>
+      <a href="https://www.youtube.com/@CodeMaster/community" target="_blank">社群</a>
+    </div>
+    <iframe src="https://www.youtube.com/embed/3fumBcKC6RE" allowfullscreen></iframe>
+  </div>
+</div>
+  <!-- 可複製下面格式建立頻道 4 ~ 20 -->
+  <!--
+  <h2 id="channelX">頻道 X：頻道名稱</h2>
+  <ul>
+    <li><a href="https://example.com/X/link1">子連結 1</a></li>
+    <li><a href="https://example.com/X/link2">子連結 2</a></li>
+    <li><a href="https://example.com/X/link3">子連結 3</a></li>
+  </ul>
+  -->
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>數學章節目錄</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f9f9f9;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+     .chapter {
+      flex: 1;
+      padding: 20px;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+    }
+    h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+    
+    .chapter-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      /* background-color: #f8f9fa; */
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .chapter-nav a {
+      margin: 4px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>數學章節目錄</h1>
+
+  <!-- 章節按鈕列 -->
+  <div class="chapter-nav text-center">
+    <!-- 用 Bootstrap 按鈕快速導覽 -->
+    <!-- 使用迴圈產生 1~40 的章節按鈕 -->
+    <!-- 你可以在這裡加入 JavaScript 動態生成 -->
+    <!-- 這裡是純 HTML 寫出 -->
+    <!-- 開始 -->
+    <div class="d-flex flex-wrap justify-content-center">
+      <a href="#chapter1" >第1章</a>
+      <a href="#chapter2" >第2章</a>
+      <a href="#chapter3" >第3章</a>
+      <a href="#chapter4" >第4章</a>
+      <a href="#chapter5" >第5章</a>
+      <a href="#chapter6" >第6章</a>
+      <a href="#chapter7" >第7章</a>
+      <a href="#chapter8" >第8章</a>
+      <a href="#chapter9" >第9章</a>
+      <a href="#chapter10" >第10章</a>
+      <a href="#chapter11" >第11章</a>
+      <a href="#chapter12" >第12章</a>
+      <a href="#chapter13" >第13章</a>
+      <a href="#chapter14" >第14章</a>
+      <a href="#chapter15" >第15章</a>
+      <a href="#chapter16" >第16章</a>
+      <a href="#chapter17" >第17章</a>
+      <a href="#chapter18" >第18章</a>
+      <a href="#chapter19" >第19章</a>
+      <a href="#chapter20" >第20章</a>
+      <!-- end -->
+    </div>
+  </div>
+</div>
+  <!-- 章節內容 -->
+  <!-- 你可以複製這段重複產生章節 -->
+  <!-- 以下僅展示部分章節公式內容作為範例 -->
+  <!-- 若需完整 20 章節，我可以幫你自動生成完整內容 -->
+
+  <!-- 範例章節 -->
+<div class="row">
+  <h2 id="chapter1">第 1 章：代數基本概念</h2>
+  <ul>
+    <li>\( a^2 + b^2 = c^2 \)</li>
+    <li>\( (a + b)^2 = a^2 + 2ab + b^2 \)</li>
+    <li>\( x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \)</li>
+  </ul>
+
+  <h2 id="chapter2">第 2 章：函數與圖形</h2>
+  <ul>
+    <li>\( f(x) = mx + b \)</li>
+    <li>\( f(x) = ax^2 + bx + c \)</li>
+    <li>\( f^{-1}(x) = \frac{x - b}{a} \)</li>
+  </ul>
+</div>
+<div class="row">
+  <h2 id="chapter3">第 3 章：三角函數</h2>
+  <ul>
+    <li>\( \sin^2\theta + \cos^2\theta = 1 \)</li>
+    <li>\( \tan\theta = \frac{\sin\theta}{\cos\theta} \)</li>
+    <li>\( \sin(2\theta) = 2\sin\theta\cos\theta \)</li>
+  </ul>
+</div>
+  <!-- 你可以複製上面區塊直到第 20 章 -->
+  <!-- 以下為空白模板，供你複製使用 -->
+  <!--
+  <h2 id="chapterX">第 X 章：章節標題</h2>
+  <ul>
+    <li>\( 公式 1 \)</li>
+    <li>\( 公式 2 \)</li>
+    <li>\( 公式 3 \)</li>
+  </ul>
+  -->
+
+</body>
+</html>

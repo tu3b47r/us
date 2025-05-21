@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>抽卡片範例</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .card-display {
+      margin-top: 30px;
+    }
+
+    .card {
+      display: inline-block;
+      /* background: white; */
+      border-radius: 12px;
+      /* box-shadow: 0 5px 15px rgba(0,0,0,0.2); */
+      padding: 20px;
+      max-width: 300px;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .card-name {
+      margin-top: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    button {
+      padding: 10px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎴 抽卡片模擬器</h1>
+  <button onclick="drawCard()">抽卡！</button>
+
+  <div class="card-display" id="cardDisplay"></div>
+
+  <script>
+    const cards = [
+      { name: "SSR 火焰龍", image: "https://picsum.photos/id/237/300/200" },
+      { name: "SR 冰雪狼", image: "https://picsum.photos/id/238/300/200" },
+      { name: "R 雷鳥", image: "https://picsum.photos/id/239/300/200" },
+      { name: "N 史萊姆", image: "https://picsum.photos/id/240/300/200" },
+      { name: "UR 黑暗騎士", image: "https://picsum.photos/id/241/300/200" }
+    ];
+
+    function drawCard() {
+      const randomIndex = Math.floor(Math.random() * cards.length);
+      const card = cards[randomIndex];
+
+      document.getElementById("cardDisplay").innerHTML = `
+        <div class="card">
+          <img src="${card.image}" alt="${card.name}">
+          <div class="card-name">${card.name}</div>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>個人作品與簡介網站</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px;
+            background-color:aquamarine;
+        }
+
+        nav {
+            background-color: teal;
+            padding: 0.5rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        nav a {
+            color: ivory;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: cadetblue;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: teal;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+        section {
+            padding: 2rem;
+        }
+
+        .portfolio img {
+            width: 100%;
+            max-width: 300px;
+            margin: 1rem;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: cadetblue;
+            color: bisque;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        p , h3{
+            color: darksalmon;
+        }
+        .text-content {
+      max-width: 60%;
+    }
+
+    .text-content h1 {
+      margin: 0 0 10px 0;
+    }
+
+    .text-content p {
+      margin: 0;
+    }
+
+    .profile-photo img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .intro-portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* 控制左右間距 */
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.intro-card, .portfolio-card {
+  flex: 1 1 45%;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.intro-card h2, .portfolio-card h2 {
+  color: darkslategray;
+}
+
+.portfolio-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.portfolio-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-3px);
+}
+
+.portfolio-item a {
+  color: teal;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-content, .profile-photo {
+        max-width: 100%;
+      }
+
+      .profile-photo img {
+        margin-top: 20px;
+      }
+      .intro-portfolio-container {
+        flex-direction: column;
+      }
+
+      .intro-card, .portfolio-card {
+        flex: 1 1 100%;
+      }
+    }
+    </style>
+    </head>
+    <body>
+        <nav>
+            <a href="#about">自我介紹</a>
+            <div class="dropdown">
+                <a href="#portfolio">作品展示 ▾</a>
+                    <div class="dropdown-content">
+                        <a href="#design">設計作品</a>
+                        <a href="#newdesign">網頁設計作品</a>
+                        <!-- 你可以在這裡加更多子項目 -->
+                    </div>
+            </div>
+
+            <a href="#contact">聯絡資訊</a>
+        </nav>
+
+        <header>
+            <div class="text-content">
+                <h1>歡迎來到我的網站</h1>
+                <p>一位熱愛創作的設計師 / 網頁前端開發者</p>
+            </div>
+            <div class="profile-photo">
+                <img src="your-photo.jpg" alt="個人照片">
+            </div>
+        </header>
+
+        <div class="row mt-4">
+
+  <!-- 左側：兩張獨立卡片 -->
+  <div class="col-md-8">
+
+    <!-- 自我介紹卡片 -->
+    <div class="card mb-4">
+      <div class="card-header bg-primary text-white">
+        自我介紹
+      </div>
+      <div class="card-body">
+        <p>
+          我是浩維，一位來自台灣的網頁設計師。擅長使用 HTML、CSS、JavaScript 與 React 製作個人前端網頁體驗。
+          <br><br>
+          甚至專長是手作卡片、平面設計、寫文章，平常會拍攝影片。影片都是勵志、安慰人心、基督信仰有關。
+          <br><br>
+          平面設計會做一些個人名片、客製化卡片與紙袋、客製化小卡。
+        </p>
+      </div>
+    </div>
+
+    <!-- YUIOOkk 文字卡片 -->
+    <div class="card mb-4">
+      <div class="card-header bg-secondary text-white">
+        YUIOOkk
+      </div>
+      <div class="card-body">
+        <img src="" class="img-fluid rounded my-2" alt="相關圖片">
+        <p><strong>YUIOOkk</strong> <a href="#">PPPPjbnbj</a></p>
+        <p>dkfjhsdk jhsdkfjhwh sjhdjkshdk</p>
+        <hr>
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">
+            <a href="#" class="btn btn-outline-warning rounded-pill">下一章</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 右側：三張原有卡片 -->
+  <div class="col-md-3 offset-md-1">
+
+    <!-- 關於我們 -->
+    <div class="card text-warning bg-danger mb-4">
+      <div class="card-header">關於我們</div>
+      <div class="card-body">
+        <p class="card-text">jkshjhfs hdfjshflsfs sdhflshflks</p>
+      </div>
+    </div>
+
+    <!-- 推薦商品 -->
+    <div class="card text-warning bg-danger mb-4">
+      <div class="card-header">推薦商品</div>
+      <div class="card-body">
+        <ul class="list-unstyled">
+          <li><a href="#">3</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">1332</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 廣告連結 -->
+    <div class="card text-warning bg-danger mb-4">
+      <div class="card-header">廣告連結</div>
+      <div class="card-body">
+        <ul class="list-unstyled">
+          <li><a href="#">廣告連結 I</a></li>
+          <li><a href="#">廣告連結 II</a></li>
+          <li><a href="#">廣告連結 III</a></li>
+          <li><a href="#">廣告連結 IV</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+       
+
+        <section id="design">
+            <div class="container">
+                <h2>設計作品</h2>
+                <p>這是我專注在設計方面的作品區：</p>
+                <img src="https://via.placeholder.com/300x200?text=設計1" alt="設計1">
+                <img src="https://via.placeholder.com/300x200?text=設計2" alt="設計2">
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>聯絡資訊</h2>
+                <p>Email: c7buid2@gmail.com</p>
+                <p>電話: 0979-371-267</p>
+                <p>歡迎透過 Email 或社群媒體聯絡我！</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 小明的網站. 保留所有權利。</p>
+        </footer>
+
+    </body>
+</html>
